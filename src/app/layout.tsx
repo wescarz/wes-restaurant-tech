@@ -1,33 +1,31 @@
 import type { Metadata } from "next";
-import { Sora, DM_Sans, JetBrains_Mono } from "next/font/google";
+import { Playfair_Display, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { IntroSplash } from "@/components/ui/IntroSplash";
 
-const sora = Sora({
-  variable: "--font-sora",
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
   subsets: ["latin"],
-  weight: ["600", "700", "800"],
+  weight: ["400", "600", "700"],
+  style: ["normal", "italic"],
 });
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
   subsets: ["latin"],
-  weight: ["400", "500"],
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
-  subsets: ["latin"],
+  weight: ["300", "400", "500"],
 });
 
 export const metadata: Metadata = {
-  title: "Wes Restaurant Tech | Tecnología para Restaurantes",
+  title: "Ascua Lab — Consultoría gastronómica, operativa y tecnológica",
   description:
-    "Apps de gestión, consultoría y desarrollo tech para restaurantes. GastroManager, Mesa y más. Barcelona.",
+    "Consultoría gastronómica y tecnología propia para restaurantes. GastroManager, Mesa y más. Abrimos, ordenamos y optimizamos restaurantes.",
   openGraph: {
-    title: "Wes Restaurant Tech | Tecnología para Restaurantes",
-    description: "Apps de gestión, consultoría y desarrollo tech para restaurantes. GastroManager, Mesa y más.",
+    title: "Ascua Lab — Consultoría gastronómica, operativa y tecnológica",
+    description:
+      "Consultoría gastronómica y tecnología propia para restaurantes. GastroManager, Mesa y más.",
     type: "website",
   },
 };
@@ -39,11 +37,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body
-        className={`${sora.variable} ${dmSans.variable} ${jetbrainsMono.variable} font-sans antialiased`}
-      >
+      <body className={`${playfair.variable} ${dmSans.variable}`}>
+        <IntroSplash />
         <Navbar />
-        <main className="min-h-screen pt-16">{children}</main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

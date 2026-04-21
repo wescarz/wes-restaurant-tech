@@ -1,9 +1,8 @@
 import { Hero } from "@/components/landing/Hero";
 import { Services } from "@/components/landing/Services";
-import { Stats } from "@/components/landing/Stats";
-import { Products } from "@/components/landing/Products";
-import { Testimonials } from "@/components/landing/Testimonials";
-import { Pricing } from "@/components/landing/Pricing";
+import { Apps } from "@/components/landing/Apps";
+import { ForWho } from "@/components/landing/ForWho";
+import { Method } from "@/components/landing/Method";
 import { CTA } from "@/components/landing/CTA";
 
 export default function Home() {
@@ -11,10 +10,9 @@ export default function Home() {
     <>
       <Hero />
       <Services />
-      <Stats />
-      <Products />
-      <Testimonials />
-      <Pricing />
+      <Apps />
+      <ForWho />
+      <Method />
       <CTA />
     </>
   );
