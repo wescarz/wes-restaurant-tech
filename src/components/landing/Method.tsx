@@ -27,7 +27,7 @@ export function Method() {
   return (
     <section
       id="como-trabajamos"
-      style={{ background: "#1A1614", padding: "100px 0" }}
+      style={{ background: "#FAF8F4", padding: "100px 0", borderBottom: "1px solid #D8CFC0" }}
     >
       <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 48px" }}>
         <AnimatedSection>
@@ -50,13 +50,13 @@ export function Method() {
               fontSize: "clamp(30px, 3.5vw, 48px)",
               fontWeight: 600,
               lineHeight: 1.12,
-              color: "#F0E8D8",
+              color: "#1A1614",
               marginBottom: 72,
             }}
           >
             Diagnóstico, propuesta,
             <br />
-            <em style={{ fontStyle: "italic", color: "#E07050" }}>ejecución</em> y seguimiento.
+            <em style={{ fontStyle: "italic", color: "#C4150A" }}>ejecución</em> y seguimiento.
           </h2>
         </AnimatedSection>
 
@@ -65,7 +65,7 @@ export function Method() {
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(4, 1fr)",
-            borderLeft: "1px solid #2E2420",
+            borderLeft: "1px solid #D8CFC0",
           }}
           className="grid-cols-2 lg:grid-cols-4"
         >
@@ -74,7 +74,7 @@ export function Method() {
               <div
                 style={{
                   padding: "0 40px",
-                  borderRight: i < steps.length - 1 ? "1px solid #2E2420" : "none",
+                  borderRight: i < steps.length - 1 ? "1px solid #D8CFC0" : "none",
                 }}
               >
                 <div
@@ -94,7 +94,7 @@ export function Method() {
                     fontFamily: "var(--font-playfair)",
                     fontSize: 20,
                     fontWeight: 600,
-                    color: "#F0E8D8",
+                    color: "#1A1614",
                     marginBottom: 14,
                     lineHeight: 1.25,
                   }}
@@ -104,7 +104,7 @@ export function Method() {
                 <div
                   style={{
                     fontSize: 13,
-                    color: "#7A6A58",
+                    color: "#6B5B4E",
                     lineHeight: 1.7,
                     fontFamily: "var(--font-dm-sans)",
                   }}
@@ -122,16 +122,16 @@ export function Method() {
             style={{
               marginTop: 64,
               paddingTop: 48,
-              borderTop: "1px solid #2E2420",
+              borderTop: "1px solid #D8CFC0",
               fontSize: 16,
-              color: "#6A5A48",
+              color: "#6B5B4E",
               lineHeight: 1.75,
               maxWidth: 640,
               fontFamily: "var(--font-dm-sans)",
             }}
           >
             El trabajo termina cuando el restaurante{" "}
-            <strong style={{ color: "#F0E8D8", fontWeight: 500 }}>funciona mejor</strong>, no
+            <strong style={{ color: "#1A1614", fontWeight: 500 }}>funciona mejor</strong>, no
             cuando entregamos el documento.
           </div>
         </AnimatedSection>

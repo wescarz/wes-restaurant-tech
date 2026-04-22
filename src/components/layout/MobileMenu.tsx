@@ -52,7 +52,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             <img
               src="/ascualab-logo.png"
               alt="Ascua Lab"
-              style={{ height: 120, margin: "-46px -18px", flexShrink: 0 }}
+              style={{ height: 80, margin: "-26px -18px", flexShrink: 0 }}
             />
           </div>
           <button

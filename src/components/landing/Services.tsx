@@ -32,9 +32,8 @@ export function Services() {
     <section
       id="servicios"
       style={{
-        background: "#1A1614",
-        color: "#F0E8D8",
-        borderBottom: "1px solid #2E2420",
+        background: "#F2EDE4",
+        borderBottom: "1px solid #D8CFC0",
         padding: "100px 0",
       }}
     >
@@ -48,7 +47,7 @@ export function Services() {
               gap: 80,
               alignItems: "flex-end",
               paddingBottom: 72,
-              borderBottom: "1px solid #2E2420",
+              borderBottom: "1px solid #D8CFC0",
             }}
             className="grid-cols-1 lg:grid-cols-2"
           >
@@ -72,18 +71,18 @@ export function Services() {
                   fontSize: "clamp(32px, 3.5vw, 50px)",
                   fontWeight: 600,
                   lineHeight: 1.12,
-                  color: "#F0E8D8",
+                  color: "#1A1614",
                 }}
               >
                 Experiencia real aplicada
                 <br />
-                al <em style={{ fontStyle: "italic", color: "#E07050" }}>negocio real</em>
+                al <em style={{ fontStyle: "italic", color: "#C4150A" }}>negocio real</em>
               </h2>
             </div>
             <div
               style={{
                 fontSize: 16,
-                color: "#8A7A68",
+                color: "#6B5B4E",
                 lineHeight: 1.75,
                 maxWidth: 480,
                 fontFamily: "var(--font-dm-sans)",
@@ -108,13 +107,9 @@ export function Services() {
               <div
                 style={{
                   padding: "52px 48px",
-                  borderRight: i % 2 === 0 ? "1px solid #2E2420" : undefined,
-                  borderBottom: i < 2 ? "1px solid #2E2420" : undefined,
+                  borderRight: i % 2 === 0 ? "1px solid #D8CFC0" : undefined,
+                  borderBottom: i < 2 ? "1px solid #D8CFC0" : undefined,
                 }}
-                className={[
-                  i % 2 === 0 ? "lg:border-r border-[#2E2420]" : "",
-                  i < 2 ? "border-b border-[#2E2420]" : "",
-                ].join(" ")}
               >
                 {/* Number */}
                 <div
@@ -124,7 +119,7 @@ export function Services() {
                     fontWeight: 700,
                     lineHeight: 1,
                     color: "#C4150A",
-                    opacity: 0.18,
+                    opacity: 0.15,
                     marginBottom: 20,
                     letterSpacing: "-.03em",
                   }}
@@ -137,7 +132,7 @@ export function Services() {
                     fontFamily: "var(--font-playfair)",
                     fontSize: 22,
                     fontWeight: 600,
-                    color: "#F0E8D8",
+                    color: "#1A1614",
                     marginBottom: 14,
                     lineHeight: 1.25,
                   }}
@@ -148,7 +143,7 @@ export function Services() {
                 <div
                   style={{
                     fontSize: 14,
-                    color: "#7A6A58",
+                    color: "#6B5B4E",
                     lineHeight: 1.72,
                     fontFamily: "var(--font-dm-sans)",
                   }}
@@ -169,8 +164,8 @@ export function Services() {
                       key={tag}
                       style={{
                         fontSize: 11,
-                        color: "#6A5A48",
-                        border: "1px solid #2E2420",
+                        color: "#8A7A6A",
+                        border: "1px solid #D8CFC0",
                         borderRadius: 2,
                         padding: "4px 10px",
                         letterSpacing: ".04em",

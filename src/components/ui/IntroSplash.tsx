@@ -38,7 +38,7 @@ export function IntroSplash() {
         src="/ascualab-logo.png"
         alt="Ascua Lab"
         style={{
-          width: 280,
+          width: 200,
           opacity: 0,
           transform: "translateY(10px)",
           animation: "introLogoIn 0.8s cubic-bezier(.22,1,.36,1) 0.3s forwards",

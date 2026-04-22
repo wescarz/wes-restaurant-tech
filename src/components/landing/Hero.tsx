@@ -29,7 +29,7 @@ export function Hero() {
         minHeight: "100vh",
         background: "#FAF8F4",
         display: "flex",
-        alignItems: "flex-end",
+        alignItems: "center",
         paddingTop: 58,
         borderBottom: "1px solid #D8CFC0",
         position: "relative",
@@ -52,7 +52,7 @@ export function Hero() {
       <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 48px", width: "100%" }}>
         <div
           style={{
-            padding: "80px 0 96px",
+            padding: "60px 0 80px",
             display: "grid",
             gridTemplateColumns: "1fr 340px",
             gap: 80,
