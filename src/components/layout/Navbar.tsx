@@ -64,7 +64,7 @@ export function Navbar() {
               <img
                 src="/ascualab-logo.png"
                 alt="Ascua Lab"
-                style={{ height: 80, margin: "-26px -18px", flexShrink: 0 }}
+                style={{ height: 80, margin: "-20px -18px", flexShrink: 0 }}
               />
             </div>
           </Link>
