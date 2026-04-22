@@ -40,7 +40,7 @@ export function Footer() {
             <div
               style={{
                 overflow: "hidden",
-                height: 30,
+                height: 40,
                 display: "flex",
                 alignItems: "center",
                 marginBottom: 16,
@@ -50,7 +50,7 @@ export function Footer() {
               <img
                 src="/ascualab-logo.png"
                 alt="Ascua Lab"
-                style={{ height: 80, margin: "-20px -18px", flexShrink: 0 }}
+                style={{ height: 80, margin: "-16px -18px", flexShrink: 0 }}
               />
             </div>
             <p

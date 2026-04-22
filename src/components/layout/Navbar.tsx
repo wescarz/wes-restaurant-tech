@@ -54,7 +54,7 @@ export function Navbar() {
             <div
               style={{
                 overflow: "hidden",
-                height: 32,
+                height: 40,
                 display: "flex",
                 alignItems: "center",
                 flexShrink: 0,
@@ -64,7 +64,7 @@ export function Navbar() {
               <img
                 src="/ascualab-logo.png"
                 alt="Ascua Lab"
-                style={{ height: 80, margin: "-20px -18px", flexShrink: 0 }}
+                style={{ height: 80, margin: "-16px -18px", flexShrink: 0 }}
               />
             </div>
           </Link>
