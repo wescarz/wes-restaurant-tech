@@ -29,149 +29,49 @@ const services = [
 
 export function Services() {
   return (
-    <section
-      id="servicios"
-      style={{
-        background: "#F2EDE4",
-        borderBottom: "1px solid #D8CFC0",
-        padding: "100px 0",
-      }}
-    >
-      <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 48px" }}>
+    <section id="servicios" style={{ background: "#F2EDE4", borderBottom: "1px solid #D8CFC0", padding: "80px 0" }}>
+      <div className="mx-auto px-6 lg:px-12" style={{ maxWidth: 1280 }}>
+
         {/* Header */}
         <AnimatedSection>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: 80,
-              alignItems: "flex-end",
-              paddingBottom: 72,
-              borderBottom: "1px solid #D8CFC0",
-            }}
-            className="grid-cols-1 lg:grid-cols-2"
-          >
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 pb-16" style={{ borderBottom: "1px solid #D8CFC0" }}>
             <div>
-              <p
-                style={{
-                  fontSize: 11,
-                  letterSpacing: ".14em",
-                  textTransform: "uppercase",
-                  color: "#D4571A",
-                  fontWeight: 500,
-                  marginBottom: 20,
-                  fontFamily: "var(--font-dm-sans)",
-                }}
-              >
+              <p style={{ fontSize: 11, letterSpacing: ".14em", textTransform: "uppercase", color: "#D4571A", fontWeight: 500, marginBottom: 20, fontFamily: "var(--font-dm-sans)" }}>
                 Consultoría gastronómica
               </p>
-              <h2
-                style={{
-                  fontFamily: "var(--font-playfair)",
-                  fontSize: "clamp(32px, 3.5vw, 50px)",
-                  fontWeight: 600,
-                  lineHeight: 1.12,
-                  color: "#1A1614",
-                }}
-              >
-                Experiencia real aplicada
-                <br />
-                al <em style={{ fontStyle: "italic", color: "#C4150A" }}>negocio real</em>
+              <h2 style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(28px, 3.5vw, 50px)", fontWeight: 600, lineHeight: 1.12, color: "#1A1614" }}>
+                Experiencia real aplicada<br />al <em style={{ fontStyle: "italic", color: "#C4150A" }}>negocio real</em>
               </h2>
             </div>
-            <div
-              style={{
-                fontSize: 16,
-                color: "#6B5B4E",
-                lineHeight: 1.75,
-                maxWidth: 480,
-                fontFamily: "var(--font-dm-sans)",
-              }}
-            >
-              Trabajamos desde dentro del negocio. Analizamos, diagnosticamos y proponemos
-              cambios concretos. No teoría, no informes que no se implementan.
+            <div style={{ fontSize: 16, color: "#6B5B4E", lineHeight: 1.75, fontFamily: "var(--font-dm-sans)" }}>
+              Trabajamos desde dentro del negocio. Analizamos, diagnosticamos y proponemos cambios concretos. No teoría, no informes que no se implementan.
             </div>
           </div>
         </AnimatedSection>
 
         {/* Grid */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(2, 1fr)",
-          }}
-          className="grid-cols-1 lg:grid-cols-2"
-        >
+        <div className="grid grid-cols-1 lg:grid-cols-2">
           {services.map((srv, i) => (
             <AnimatedSection key={srv.n} delay={i * 0.07}>
               <div
-                style={{
-                  padding: "52px 48px",
-                  borderRight: i % 2 === 0 ? "1px solid #D8CFC0" : undefined,
-                  borderBottom: i < 2 ? "1px solid #D8CFC0" : undefined,
-                }}
+                className={[
+                  "p-10 lg:p-14",
+                  i % 2 === 0 ? "lg:border-r border-[#D8CFC0]" : "",
+                  i < 2 ? "border-b border-[#D8CFC0]" : "",
+                ].join(" ")}
               >
-                {/* Number */}
-                <div
-                  style={{
-                    fontFamily: "var(--font-playfair)",
-                    fontSize: 72,
-                    fontWeight: 700,
-                    lineHeight: 1,
-                    color: "#C4150A",
-                    opacity: 0.15,
-                    marginBottom: 20,
-                    letterSpacing: "-.03em",
-                  }}
-                >
+                <div style={{ fontFamily: "var(--font-playfair)", fontSize: 64, fontWeight: 700, lineHeight: 1, color: "#C4150A", opacity: 0.15, marginBottom: 20, letterSpacing: "-.03em" }}>
                   {srv.n}
                 </div>
-
-                <div
-                  style={{
-                    fontFamily: "var(--font-playfair)",
-                    fontSize: 22,
-                    fontWeight: 600,
-                    color: "#1A1614",
-                    marginBottom: 14,
-                    lineHeight: 1.25,
-                  }}
-                >
+                <div style={{ fontFamily: "var(--font-playfair)", fontSize: 22, fontWeight: 600, color: "#1A1614", marginBottom: 14, lineHeight: 1.25 }}>
                   {srv.title}
                 </div>
-
-                <div
-                  style={{
-                    fontSize: 14,
-                    color: "#6B5B4E",
-                    lineHeight: 1.72,
-                    fontFamily: "var(--font-dm-sans)",
-                  }}
-                >
+                <div style={{ fontSize: 14, color: "#6B5B4E", lineHeight: 1.72, fontFamily: "var(--font-dm-sans)" }}>
                   {srv.desc}
                 </div>
-
-                <div
-                  style={{
-                    marginTop: 20,
-                    display: "flex",
-                    flexWrap: "wrap",
-                    gap: 7,
-                  }}
-                >
+                <div className="flex flex-wrap gap-2 mt-5">
                   {srv.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      style={{
-                        fontSize: 11,
-                        color: "#8A7A6A",
-                        border: "1px solid #D8CFC0",
-                        borderRadius: 2,
-                        padding: "4px 10px",
-                        letterSpacing: ".04em",
-                        fontFamily: "var(--font-dm-sans)",
-                      }}
-                    >
+                    <span key={tag} style={{ fontSize: 11, color: "#8A7A6A", border: "1px solid #D8CFC0", borderRadius: 2, padding: "4px 10px", letterSpacing: ".04em", fontFamily: "var(--font-dm-sans)" }}>
                       {tag}
                     </span>
                   ))}
@@ -180,6 +80,7 @@ export function Services() {
             </AnimatedSection>
           ))}
         </div>
+
       </div>
     </section>
   );

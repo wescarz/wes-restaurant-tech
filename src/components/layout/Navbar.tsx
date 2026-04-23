@@ -38,46 +38,22 @@ export function Navbar() {
           backdropFilter: scrolled ? "blur(14px)" : undefined,
         }}
       >
-        <div
-          style={{
-            maxWidth: 1280,
-            margin: "0 auto",
-            padding: "0 48px",
-            height: "100%",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-          }}
-        >
+        <div className="flex items-center justify-between h-full mx-auto px-6 lg:px-12" style={{ maxWidth: 1280 }}>
+
           {/* Logo */}
-          <Link href="/" style={{ display: "flex", alignItems: "center" }}>
-            <div
-              style={{
-                overflow: "hidden",
-                height: 40,
-                display: "flex",
-                alignItems: "center",
-                flexShrink: 0,
-              }}
-            >
+          <Link href="/" className="flex items-center flex-shrink-0">
+            <div style={{ overflow: "hidden", width: 84, height: 40 }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/ascualab-logo.png"
                 alt="Ascua Lab"
-                style={{ height: 80, margin: "-19px -18px", flexShrink: 0 }}
+                style={{ width: 120, height: "auto", transform: "translate(-18px, -19px)" }}
               />
             </div>
           </Link>
 
           {/* Desktop nav */}
-          <nav
-            style={{
-              display: "flex",
-              gap: 36,
-              listStyle: "none",
-            }}
-            className="hidden lg:flex"
-          >
+          <nav className="hidden lg:flex items-center" style={{ gap: 36 }}>
             {links.map((link) => (
               <Link
                 key={link.href}
@@ -131,13 +107,7 @@ export function Navbar() {
             type="button"
             onClick={() => setMobileOpen(true)}
             className="lg:hidden"
-            style={{
-              padding: 8,
-              color: "#1A1614",
-              background: "none",
-              border: "none",
-              cursor: "pointer",
-            }}
+            style={{ padding: 8, color: "#1A1614", background: "none", border: "none", cursor: "pointer" }}
             aria-label="Abrir menú"
           >
             <Menu size={24} />
