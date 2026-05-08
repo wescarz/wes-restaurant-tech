@@ -19,13 +19,13 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Ascua Lab — Consultoría gastronómica, operativa y tecnológica",
+  title: "whet studio — Afilamos restaurantes",
   description:
-    "Consultoría gastronómica y tecnología propia para restaurantes. GastroManager, Mesa y más. Abrimos, ordenamos y optimizamos restaurantes.",
+    "Consultoría gastronómica y tecnología propia para restaurantes. GastroManager, MESA y más. Abrimos, ordenamos y optimizamos restaurantes.",
   openGraph: {
-    title: "Ascua Lab — Consultoría gastronómica, operativa y tecnológica",
+    title: "whet studio — Afilamos restaurantes",
     description:
-      "Consultoría gastronómica y tecnología propia para restaurantes. GastroManager, Mesa y más.",
+      "Consultoría gastronómica y tecnología propia para restaurantes. GastroManager, MESA y más.",
     type: "website",
   },
 };

@@ -16,7 +16,7 @@ export function ForWho() {
 
         <AnimatedSection>
           <p style={{ fontSize: 11, letterSpacing: ".14em", textTransform: "uppercase", color: "#D4571A", fontWeight: 500, marginBottom: 20, fontFamily: "var(--font-dm-sans)" }}>
-            Para quién es Ascua Lab
+            Para quién es whet studio
           </p>
           <h2 style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(28px, 3.5vw, 48px)", fontWeight: 600, lineHeight: 1.12, color: "#1A1614", marginBottom: 8 }}>
             No trabajamos para todos.<br />

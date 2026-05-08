@@ -38,27 +38,30 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           boxShadow: "-8px 0 40px rgba(0,0,0,.08)",
         }}
       >
+        {/* Dark header with logo */}
         <div
           style={{
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
             padding: "12px 24px",
-            borderBottom: "1px solid #D8CFC0",
+            background: "#0A0908",
+            borderBottom: "1px solid rgba(255,255,255,.1)",
+            height: 58,
           }}
         >
           <div style={{ overflow: "hidden", width: 84, height: 40 }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/ascualab-logo.png"
-              alt="Ascua Lab"
+              alt="whet studio"
               style={{ width: 120, height: "auto", transform: "translate(-18px, -19px)" }}
             />
           </div>
           <button
             type="button"
             onClick={onClose}
-            style={{ padding: 8, color: "#6B5B4E", background: "none", border: "none", cursor: "pointer" }}
+            style={{ padding: 8, color: "#8A8078", background: "none", border: "none", cursor: "pointer" }}
             aria-label="Cerrar menú"
           >
             <X size={20} />

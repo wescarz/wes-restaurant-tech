@@ -28,7 +28,7 @@ export function IntroSplash() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        background: "#FAF8F4",
+        background: "#0A0908",
         pointerEvents: "none",
       }}
     >
@@ -36,7 +36,7 @@ export function IntroSplash() {
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/ascualab-logo.png"
-        alt="Ascua Lab"
+        alt="whet studio"
         style={{
           width: 200,
           opacity: 0,
@@ -65,7 +65,7 @@ export function IntroSplash() {
         style={{
           position: "absolute",
           inset: 0,
-          background: "#FAF8F4",
+          background: "#0A0908",
           transformOrigin: "top",
           animation: "introCurtainUp 0.65s cubic-bezier(.76,0,.24,1) 1.7s forwards",
         }}

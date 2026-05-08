@@ -43,7 +43,7 @@ export function Hero() {
           <div>
             <AnimatedSection>
               <p style={{ fontSize: 11, letterSpacing: ".14em", textTransform: "uppercase", color: "#D4571A", fontWeight: 500, marginBottom: 24, fontFamily: "var(--font-dm-sans)" }}>
-                Consultoría gastronómica · Operativa · Tecnología
+                whet studio · Afilamos restaurantes
               </p>
             </AnimatedSection>
 

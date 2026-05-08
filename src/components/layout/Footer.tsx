@@ -17,10 +17,10 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer style={{ background: "#F2EDE4", borderTop: "1px solid #D8CFC0", padding: "64px 0 40px" }}>
+    <footer style={{ background: "#0A0908", borderTop: "1px solid rgba(255,255,255,.08)", padding: "64px 0 40px" }}>
       <div className="mx-auto px-6 lg:px-12" style={{ maxWidth: 1280 }}>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 pb-12" style={{ borderBottom: "1px solid #D8CFC0" }}>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 pb-12" style={{ borderBottom: "1px solid rgba(255,255,255,.08)" }}>
 
           {/* Brand */}
           <div className="md:col-span-1">
@@ -28,11 +28,11 @@ export function Footer() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/ascualab-logo.png"
-                alt="Ascua Lab"
+                alt="whet studio"
                 style={{ width: 120, height: "auto", transform: "translate(-18px, -19px)" }}
               />
             </div>
-            <p style={{ fontSize: 14, color: "#8A7A6A", lineHeight: 1.65, maxWidth: 280, fontFamily: "var(--font-dm-sans)" }}>
+            <p style={{ fontSize: 14, color: "#8A8078", lineHeight: 1.65, maxWidth: 280, fontFamily: "var(--font-dm-sans)" }}>
               Tecnología y consultoría para restaurantes que quieren operar mejor, vender más y crecer con control.
             </p>
           </div>
@@ -48,9 +48,9 @@ export function Footer() {
                   <Link
                     key={link.label}
                     href={link.href}
-                    style={{ fontSize: 14, color: "#8A7A6A", textDecoration: "none", transition: "color .2s", fontFamily: "var(--font-dm-sans)" }}
-                    onMouseEnter={(e) => (e.currentTarget.style.color = "#1A1614")}
-                    onMouseLeave={(e) => (e.currentTarget.style.color = "#8A7A6A")}
+                    style={{ fontSize: 14, color: "#8A8078", textDecoration: "none", transition: "color .2s", fontFamily: "var(--font-dm-sans)" }}
+                    onMouseEnter={(e) => (e.currentTarget.style.color = "#F0EAE0")}
+                    onMouseLeave={(e) => (e.currentTarget.style.color = "#8A8078")}
                   >
                     {link.label}
                   </Link>
@@ -61,11 +61,11 @@ export function Footer() {
         </div>
 
         <div className="flex flex-wrap justify-between gap-2 pt-7">
-          <span style={{ fontSize: 12, color: "#B0A090", fontFamily: "var(--font-dm-sans)" }}>
-            © {new Date().getFullYear()} Ascua Lab.
+          <span style={{ fontSize: 12, color: "#6A605A", fontFamily: "var(--font-dm-sans)" }}>
+            © {new Date().getFullYear()} whet studio.
           </span>
-          <span style={{ fontSize: 12, color: "#B0A090", fontFamily: "var(--font-dm-sans)" }}>
-            Consultoría gastronómica · Tecnología propia para restauración.
+          <span style={{ fontSize: 12, color: "#6A605A", fontFamily: "var(--font-dm-sans)" }}>
+            Afilamos restaurantes · Consultoría y tecnología propia.
           </span>
         </div>
       </div>

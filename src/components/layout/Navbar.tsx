@@ -32,22 +32,22 @@ export function Navbar() {
           right: 0,
           zIndex: 100,
           height: 58,
-          borderBottom: "1px solid rgba(210,200,185,.5)",
-          transition: "background .3s",
-          background: scrolled ? "rgba(250,248,244,.95)" : "transparent",
+          background: scrolled ? "rgba(10,9,8,.97)" : "#0A0908",
+          borderBottom: "1px solid rgba(255,255,255,.07)",
           backdropFilter: scrolled ? "blur(14px)" : undefined,
+          transition: "background .3s",
         }}
       >
         <div className="flex items-center justify-between h-full mx-auto px-6 lg:px-12" style={{ maxWidth: 1280 }}>
 
           {/* Logo */}
           <Link href="/" className="flex items-center flex-shrink-0">
-            <div style={{ overflow: "hidden", width: 84, height: 40 }}>
+            <div style={{ overflow: "hidden", width: 72, height: 58 }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/ascualab-logo.png"
-                alt="Ascua Lab"
-                style={{ width: 120, height: "auto", transform: "translate(-18px, -19px)" }}
+                alt="whet studio"
+                style={{ width: 120, height: "auto", transform: "translate(-24px, -34px)" }}
               />
             </div>
           </Link>
@@ -58,15 +58,9 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                style={{
-                  fontSize: 13,
-                  color: "#8A7060",
-                  textDecoration: "none",
-                  letterSpacing: ".01em",
-                  transition: "color .2s",
-                }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "#1A1614")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "#8A7060")}
+                style={{ fontSize: 13, color: "#8A8078", textDecoration: "none", letterSpacing: ".01em", transition: "color .2s" }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "#F0EAE0")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "#8A8078")}
               >
                 {link.label}
               </Link>
@@ -77,26 +71,9 @@ export function Navbar() {
           <div className="hidden lg:block">
             <Link
               href="/#contacto"
-              style={{
-                fontSize: 13,
-                fontWeight: 500,
-                padding: "9px 20px",
-                border: "1.5px solid #1A1614",
-                borderRadius: 4,
-                color: "#1A1614",
-                textDecoration: "none",
-                transition: "all .2s",
-                background: "transparent",
-                fontFamily: "var(--font-dm-sans)",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = "#1A1614";
-                e.currentTarget.style.color = "#FAF8F4";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = "transparent";
-                e.currentTarget.style.color = "#1A1614";
-              }}
+              style={{ fontSize: 13, fontWeight: 500, padding: "9px 20px", border: "1.5px solid rgba(240,234,224,.25)", borderRadius: 4, color: "#F0EAE0", textDecoration: "none", transition: "all .2s", background: "transparent", fontFamily: "var(--font-dm-sans)" }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = "#F0EAE0"; e.currentTarget.style.color = "#0A0908"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#F0EAE0"; }}
             >
               Solicitar diagnóstico
             </Link>
@@ -107,7 +84,7 @@ export function Navbar() {
             type="button"
             onClick={() => setMobileOpen(true)}
             className="lg:hidden"
-            style={{ padding: 8, color: "#1A1614", background: "none", border: "none", cursor: "pointer" }}
+            style={{ padding: 8, color: "#F0EAE0", background: "none", border: "none", cursor: "pointer" }}
             aria-label="Abrir menú"
           >
             <Menu size={24} />
