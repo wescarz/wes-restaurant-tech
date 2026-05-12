@@ -66,3 +66,9 @@ body {
 @keyframes introCurtainUp {
   to { transform: translateY(-100%); }
 }
+
+/* ── MARQUEE ── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
