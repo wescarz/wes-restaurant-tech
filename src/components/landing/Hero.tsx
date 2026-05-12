@@ -3,10 +3,22 @@
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 
 const pillars = [
-  "Aperturas y concepto",
-  "Escandallos y food cost",
-  "Procesos y estructura de equipo",
-  "GastroManager · MESA",
+  {
+    title: "Concepto y oferta gastronómica",
+    desc: "Propuestas personalizadas, creativas y diseñadas para ser rentables desde el inicio.",
+  },
+  {
+    title: "Rentabilidad y márgenes",
+    desc: "Más beneficio por cada plato, sin subir precios ni bajar calidad.",
+  },
+  {
+    title: "Procesos y estructura de equipo",
+    desc: "Operación que funciona sin depender de ti en cada decisión.",
+  },
+  {
+    title: "Tecnología propia",
+    desc: "GastroManager y MESA — herramientas que el equipo usa de verdad.",
+  },
 ];
 
 export function Hero() {
@@ -69,17 +81,18 @@ export function Hero() {
           </div>
 
           {/* Right — áreas de trabajo, desktop only */}
-          <AnimatedSection delay={0.2} className="hidden lg:flex" >
-            <div style={{ borderLeft: "1px solid #D8CFC0", paddingLeft: 48, paddingTop: 8, display: "flex", flexDirection: "column", justifyContent: "flex-start", gap: 0 }}>
-              <p style={{ fontSize: 10, letterSpacing: ".14em", textTransform: "uppercase", color: "#B0A090", marginBottom: 20, fontFamily: "var(--font-dm-sans)" }}>
-                Áreas de trabajo
+          <AnimatedSection delay={0.2} className="hidden lg:block">
+            <div style={{ borderLeft: "1px solid #D8CFC0", paddingLeft: 40, paddingTop: 4 }}>
+              <p style={{ fontSize: 10, letterSpacing: ".14em", textTransform: "uppercase", color: "#B0A090", marginBottom: 24, fontFamily: "var(--font-dm-sans)" }}>
+                Qué hacemos
               </p>
               {pillars.map((p, i) => (
                 <div
                   key={i}
-                  style={{ padding: "14px 0", borderBottom: i < pillars.length - 1 ? "1px solid #EDE5DA" : undefined }}
+                  style={{ padding: "16px 0", borderBottom: i < pillars.length - 1 ? "1px solid #EDE5DA" : undefined }}
                 >
-                  <span style={{ fontSize: 13, color: "#4A3C34", fontFamily: "var(--font-dm-sans)", fontWeight: 400 }}>{p}</span>
+                  <div style={{ fontSize: 13, fontWeight: 500, color: "#1A1614", marginBottom: 5, fontFamily: "var(--font-dm-sans)" }}>{p.title}</div>
+                  <div style={{ fontSize: 12, color: "#9A8A7A", lineHeight: 1.55, fontFamily: "var(--font-dm-sans)" }}>{p.desc}</div>
                 </div>
               ))}
             </div>
