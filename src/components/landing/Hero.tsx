@@ -24,8 +24,8 @@ export function Hero() {
           </AnimatedSection>
 
           <AnimatedSection delay={0.05}>
-            <h1 style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(40px, 6vw, 84px)", fontWeight: 600, lineHeight: 1.04, letterSpacing: "-.02em", color: "#1A1614", maxWidth: 800, fontVariantLigatures: "none" }}>
-              Afilamos<br />
+            <h1 style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(40px, 6vw, 84px)", fontWeight: 600, lineHeight: 1.04, letterSpacing: "-.02em", color: "#1A1614", maxWidth: 800, fontFeatureSettings: '"liga" 0, "clig" 0, "dlig" 0' }}>
+              Af{'‌'}ilamos<br />
               <em style={{ fontStyle: "italic", color: "#C4150A" }}>restaurantes.</em>
             </h1>
           </AnimatedSection>
