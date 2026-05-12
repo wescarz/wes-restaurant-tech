@@ -26,12 +26,14 @@ export function Footer() {
 
           {/* Brand */}
           <div className="md:col-span-1">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/whet-logo.png"
-              alt="whet studio"
-              style={{ width: 80, height: 80, marginBottom: 8 }}
-            />
+            <div style={{ overflow: "hidden", width: 140, height: 56, marginBottom: 12 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/whet-logo.png"
+                alt="whet studio"
+                style={{ width: 140, height: "auto", transform: "translate(0px, -41px)" }}
+              />
+            </div>
             <p style={{ fontSize: 14, color: "#8A8078", lineHeight: 1.65, maxWidth: 280, fontFamily: "var(--font-dm-sans)" }}>
               Tecnología y consultoría para restaurantes que quieren operar mejor, vender más y crecer con control.
             </p>

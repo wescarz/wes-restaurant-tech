@@ -10,7 +10,7 @@ export function IntroSplash() {
     const timer = setTimeout(() => {
       setDone(true);
       document.body.style.overflow = "";
-    }, 2900);
+    }, 5200);
     return () => {
       clearTimeout(timer);
       document.body.style.overflow = "";
@@ -31,19 +31,18 @@ export function IntroSplash() {
         justifyContent: "center",
         background: "#0A0908",
         pointerEvents: "none",
-        gap: 0,
       }}
     >
-      {/* Logo */}
+      {/* Logo grande */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/whet-logo.png"
         alt="whet studio"
         style={{
-          width: 240,
-          height: 240,
+          width: "min(420px, 72vw)",
+          height: "auto",
           opacity: 0,
-          animation: "introLogoIn 1s cubic-bezier(.22,1,.36,1) 0.15s forwards",
+          animation: "introLogoIn 1.4s cubic-bezier(.22,1,.36,1) 0.2s forwards",
         }}
       />
 
@@ -51,19 +50,19 @@ export function IntroSplash() {
       <p
         style={{
           fontFamily: "var(--font-dm-sans)",
-          fontSize: 11,
-          letterSpacing: ".22em",
+          fontSize: "clamp(10px, 1.2vw, 13px)",
+          letterSpacing: ".28em",
           textTransform: "uppercase",
           color: "#6A605A",
-          marginTop: 4,
+          marginTop: 8,
           opacity: 0,
-          animation: "introTaglineIn 0.8s cubic-bezier(.22,1,.36,1) 0.85s forwards",
+          animation: "introTaglineIn 1s cubic-bezier(.22,1,.36,1) 1.2s forwards",
         }}
       >
         Afilamos restaurantes
       </p>
 
-      {/* Red accent line */}
+      {/* Línea roja inferior */}
       <div
         style={{
           position: "absolute",
@@ -74,17 +73,17 @@ export function IntroSplash() {
           transformOrigin: "left",
           transform: "scaleX(0)",
           background: "linear-gradient(90deg, #C4150A, #D4571A 60%, transparent)",
-          animation: "introLineGrow 1.2s cubic-bezier(.22,1,.36,1) 0.4s forwards",
+          animation: "introLineGrow 1.8s cubic-bezier(.22,1,.36,1) 0.5s forwards",
         }}
       />
 
-      {/* Curtain slides up to reveal site */}
+      {/* Telón que sube */}
       <div
         style={{
           position: "absolute",
           inset: 0,
           background: "#0A0908",
-          animation: "introCurtainUp 0.75s cubic-bezier(.76,0,.24,1) 2.2s forwards",
+          animation: "introCurtainUp 0.85s cubic-bezier(.76,0,.24,1) 4.4s forwards",
         }}
       />
     </div>
