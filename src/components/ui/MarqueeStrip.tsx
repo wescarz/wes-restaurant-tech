@@ -1,41 +1,49 @@
-const items = [
-  { type: "brand", text: "whet studio" },
-  { type: "sep", text: "·" },
-  { type: "text", text: "Afilamos restaurantes" },
-  { type: "sep", text: "·" },
-  { type: "text", text: "Consultoría gastronómica" },
-  { type: "sep", text: "·" },
-  { type: "text", text: "Rentabilidad y márgenes" },
-  { type: "sep", text: "·" },
-  { type: "text", text: "Aperturas" },
-  { type: "sep", text: "·" },
-  { type: "text", text: "Procesos y equipo" },
-  { type: "sep", text: "·" },
-  { type: "text", text: "GastroManager" },
-  { type: "sep", text: "·" },
-  { type: "text", text: "MESA" },
-  { type: "sep", text: "·" },
+"use client";
+
+const tags = [
+  "Consultoría gastronómica",
+  "Rentabilidad y márgenes",
+  "Aperturas",
+  "Procesos y equipo",
+  "GastroManager",
+  "MESA",
+  "Concepto gastronómico",
+  "Ingeniería de menú",
 ];
+
+function WhetLogo() {
+  return (
+    <span style={{ display: "inline-flex", flexDirection: "column", alignItems: "flex-start", lineHeight: 1, margin: "0 32px" }}>
+      <span style={{ fontFamily: "var(--font-fraunces)", fontSize: 22, fontWeight: 300, fontStyle: "italic", color: "#FAF8F4", letterSpacing: "-.01em" }}>
+        whet
+      </span>
+      <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 7, letterSpacing: ".22em", textTransform: "uppercase", color: "#5A4A3A", marginTop: 1 }}>
+        studio
+      </span>
+    </span>
+  );
+}
 
 function Strip() {
   return (
-    <span style={{ display: "inline-flex", alignItems: "center", gap: 0, whiteSpace: "nowrap" }}>
-      {items.map((item, i) => (
-        <span
-          key={i}
-          style={{
-            fontFamily: item.type === "brand" ? "var(--font-cormorant)" : "var(--font-dm-sans)",
-            fontSize: item.type === "brand" ? 17 : item.type === "sep" ? 12 : 12,
-            fontWeight: item.type === "brand" ? 600 : item.type === "sep" ? 400 : 400,
-            fontStyle: item.type === "brand" ? "italic" : "normal",
-            color: item.type === "brand" ? "#FAF8F4" : item.type === "sep" ? "#6B5B4E" : "#A09080",
-            letterSpacing: item.type === "brand" ? ".02em" : ".12em",
-            textTransform: item.type === "text" ? "uppercase" : "none",
-            padding: item.type === "sep" ? "0 20px" : "0 0",
-            marginRight: item.type === "brand" ? 20 : 0,
-          }}
-        >
-          {item.text}
+    <span style={{ display: "inline-flex", alignItems: "center", whiteSpace: "nowrap" }}>
+      {tags.map((tag, i) => (
+        <span key={i} style={{ display: "inline-flex", alignItems: "center" }}>
+          <span style={{
+            fontFamily: "var(--font-dm-sans)",
+            fontSize: 10,
+            fontWeight: 400,
+            letterSpacing: ".18em",
+            textTransform: "uppercase",
+            color: "#7A6A5A",
+            padding: "0 28px",
+          }}>
+            {tag}
+          </span>
+          {i % 3 === 2 && <WhetLogo />}
+          {i % 3 !== 2 && (
+            <span style={{ color: "#3A2A1A", fontSize: 8 }}>·</span>
+          )}
         </span>
       ))}
     </span>
@@ -47,16 +55,17 @@ export function MarqueeStrip() {
     <div
       style={{
         background: "#0A0908",
-        borderTop: "1px solid #2E2420",
-        borderBottom: "1px solid #2E2420",
+        borderTop: "1px solid #1E1612",
+        borderBottom: "1px solid #1E1612",
         overflow: "hidden",
-        padding: "14px 0",
+        padding: "10px 0",
       }}
     >
       <div
         style={{
           display: "inline-flex",
-          animation: "marquee 28s linear infinite",
+          alignItems: "center",
+          animation: "marquee 32s linear infinite",
           willChange: "transform",
         }}
       >
