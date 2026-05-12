@@ -8,34 +8,43 @@ import { Badge } from "@/components/ui/Badge";
 
 const plans = [
   {
-    id: "starter",
-    name: "Starter",
-    monthly: 29,
-    yearly: 24,
-    features: ["50 recetas", "200 productos", "1 usuario", "Soporte por email"],
-    missing: ["HACCP", "Auditor IA", "Menu Engineering"],
-    cta: "Empezar",
+    id: "pase",
+    name: "Pase",
+    desc: "Para jefes de cocina y equipos de cocina",
+    monthly: 19,
+    yearly: 16,
+    features: [
+      "Recetas y productos ilimitados",
+      "Producción y etiquetas",
+      "Recepción de mercancía + OCR",
+      "Pedidos a proveedores",
+      "Control de temperaturas",
+      "30 usos IA/mes",
+      "Compra +30 usos IA por 5€",
+    ],
+    cta: "Suscribirse — 19€/mes",
+    ctaYearly: "Suscribirse — 16€/mes",
     popular: false,
   },
   {
-    id: "professional",
-    name: "Professional",
-    monthly: 79,
-    yearly: 65,
-    features: ["Recetas ilimitadas", "Productos ilimitados", "5 usuarios", "HACCP", "Menu Engineering", "Soporte prioritario"],
-    missing: ["Auditor IA"],
-    cta: "Más popular",
+    id: "control-pase",
+    name: "Control + Pase",
+    desc: "Para propietarios y gestores de restaurante",
+    monthly: 49,
+    yearly: 41,
+    features: [
+      "Todo lo del Plan Pase",
+      "Dashboard Centro de Control",
+      "Gastos fijos y Rentabilidad",
+      "Cartas e Ingeniería de menú",
+      "Personal y Horarios",
+      "Auditor IA + Análisis documentos",
+      "Informes avanzados (P&L, Food Cost)",
+      "IA ilimitada",
+    ],
+    cta: "Suscribirse — 49€/mes",
+    ctaYearly: "Suscribirse — 41€/mes",
     popular: true,
-  },
-  {
-    id: "enterprise",
-    name: "Enterprise",
-    monthly: 199,
-    yearly: 165,
-    features: ["Todo en Professional", "Usuarios ilimitados", "Auditor IA", "Soporte dedicado"],
-    missing: [],
-    cta: "Contactar",
-    popular: false,
   },
 ];
 
@@ -43,10 +52,6 @@ export function Pricing() {
   const [yearly, setYearly] = useState(false);
 
   async function handleCheckout(planId: string) {
-    if (planId === "enterprise") {
-      window.location.href = "/contacto?plan=enterprise";
-      return;
-    }
     try {
       const res = await fetch("/api/stripe/checkout", {
         method: "POST",
@@ -62,88 +67,98 @@ export function Pricing() {
 
   return (
     <section className="py-24 bg-[var(--bg-secondary)]" id="precios">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto px-6 lg:px-12" style={{ maxWidth: 1280 }}>
+
         <AnimatedSection className="text-center mb-12">
-          <h2 className="font-heading text-3xl font-bold text-[var(--text-primary)] sm:text-4xl">
-            Precios
+          <h2 style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(28px, 4vw, 48px)", fontWeight: 600, color: "#1A1614" }}>
+            Elige tu plan
           </h2>
-          <p className="mt-4 text-[var(--text-secondary)]">
-            Elige el plan que mejor se adapte a tu restaurante.
+          <p style={{ marginTop: 12, fontSize: 16, color: "#6B5B4E", fontFamily: "var(--font-dm-sans)" }}>
+            Sin límites de recetas ni productos. Sin sorpresas.
           </p>
           <div className="mt-6 flex items-center justify-center gap-3">
-            <span className={!yearly ? "text-[var(--text-primary)]" : "text-[var(--text-secondary)]"}>Mensual</span>
+            <span style={{ fontSize: 14, color: yearly ? "#8A7A6A" : "#1A1614", fontFamily: "var(--font-dm-sans)" }}>Mensual</span>
             <button
               type="button"
               role="switch"
               aria-checked={yearly}
               onClick={() => setYearly(!yearly)}
-              className="relative h-6 w-11 rounded-full bg-[var(--border)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--accent)] data-[state=checked]:bg-[var(--accent)]"
-              style={{ backgroundColor: yearly ? "var(--accent)" : "var(--border)" }}
+              className="relative h-6 w-11 rounded-full transition-colors focus:outline-none"
+              style={{ backgroundColor: yearly ? "#C4150A" : "#D8CFC0" }}
             >
               <span
                 className="absolute left-1 top-1 h-4 w-4 rounded-full bg-white transition-transform"
                 style={{ transform: yearly ? "translateX(20px)" : "translateX(0)" }}
               />
             </button>
-            <span className={yearly ? "text-[var(--text-primary)]" : "text-[var(--text-secondary)]"}>Anual (-17%)</span>
+            <span style={{ fontSize: 14, color: yearly ? "#1A1614" : "#8A7A6A", fontFamily: "var(--font-dm-sans)" }}>Anual (−17%)</span>
           </div>
         </AnimatedSection>
-        <div className="grid gap-8 lg:grid-cols-3">
+
+        <div className="grid gap-6 lg:grid-cols-2" style={{ maxWidth: 860, margin: "0 auto" }}>
           {plans.map((plan, i) => (
             <AnimatedSection key={plan.id} delay={i * 0.1}>
               <div
-                className={`relative rounded-xl border p-6 ${
-                  plan.popular ? "border-[var(--accent)] bg-[var(--bg-card)]" : "border-[var(--border)] bg-[var(--bg-card)]"
-                }`}
+                style={{
+                  position: "relative",
+                  borderRadius: 12,
+                  border: plan.popular ? "2px solid #C4150A" : "1px solid #D8CFC0",
+                  background: "#FAF8F4",
+                  padding: "32px",
+                }}
               >
                 {plan.popular && (
                   <Badge variant="accent" className="absolute -top-3 left-6">
-                    Más popular
+                    Recomendado
                   </Badge>
                 )}
-                <h3 className="font-heading text-xl font-semibold text-[var(--text-primary)]">{plan.name}</h3>
-                <div className="mt-4 flex items-baseline gap-1">
-                  <span className="text-3xl font-bold text-[var(--text-primary)]">
+
+                <h3 style={{ fontFamily: "var(--font-playfair)", fontSize: 22, fontWeight: 600, color: "#1A1614" }}>
+                  {plan.name}
+                </h3>
+                <p style={{ fontSize: 13, color: "#8A7A6A", marginTop: 4, fontFamily: "var(--font-dm-sans)" }}>
+                  {plan.desc}
+                </p>
+
+                <div className="flex items-baseline gap-1" style={{ marginTop: 20 }}>
+                  <span style={{ fontSize: 40, fontWeight: 700, color: "#1A1614", fontFamily: "var(--font-dm-sans)" }}>
                     {yearly ? plan.yearly : plan.monthly}€
                   </span>
-                  <span className="text-[var(--text-secondary)]">/mes</span>
+                  <span style={{ fontSize: 14, color: "#8A7A6A", fontFamily: "var(--font-dm-sans)" }}>/mes</span>
                 </div>
-                <ul className="mt-6 space-y-3">
+
+                <ul style={{ marginTop: 24, display: "flex", flexDirection: "column", gap: 10 }}>
                   {plan.features.map((f) => (
-                    <li key={f} className="flex items-center gap-2 text-sm text-[var(--text-primary)]">
-                      <Check className="h-4 w-4 shrink-0 text-[var(--success)]" />
+                    <li key={f} className="flex items-center gap-2" style={{ fontSize: 14, color: "#1A1614", fontFamily: "var(--font-dm-sans)" }}>
+                      <Check size={15} style={{ color: "#C4150A", flexShrink: 0 }} />
                       {f}
                     </li>
                   ))}
-                  {plan.missing.map((m) => (
-                    <li key={m} className="flex items-center gap-2 text-sm text-[var(--text-secondary)]">
-                      <span className="text-[var(--text-secondary)]">—</span> {m}
-                    </li>
-                  ))}
                 </ul>
-                <div className="mt-8">
-                  {plan.id === "enterprise" ? (
-                    <Button
-                      variant="outline"
-                      className="w-full"
-                      href="/contacto?plan=enterprise"
-                    >
-                      {plan.cta}
-                    </Button>
-                  ) : (
-                    <Button
-                      variant={plan.popular ? "primary" : "outline"}
-                      className="w-full"
-                      onClick={() => handleCheckout(plan.id)}
-                    >
-                      {plan.cta}
-                    </Button>
-                  )}
+
+                <div style={{ marginTop: 32 }}>
+                  <Button
+                    variant={plan.popular ? "primary" : "outline"}
+                    className="w-full"
+                    onClick={() => handleCheckout(plan.id)}
+                  >
+                    {yearly ? plan.ctaYearly : plan.cta}
+                  </Button>
                 </div>
               </div>
             </AnimatedSection>
           ))}
         </div>
+
+        {/* Nota sobre IA */}
+        <AnimatedSection>
+          <div style={{ maxWidth: 860, margin: "24px auto 0", padding: "20px 24px", background: "#F2EDE4", borderRadius: 8, border: "1px solid #D8CFC0" }}>
+            <p style={{ fontSize: 13, color: "#6B5B4E", lineHeight: 1.65, fontFamily: "var(--font-dm-sans)" }}>
+              <strong style={{ color: "#1A1614" }}>Sobre la IA:</strong> El plan Pase incluye 30 usos de IA al mes (OCR de albaranes, asistente de recetas, revisión de costes). Si necesitas más, puedes comprar packs de +30 usos por 5€. El plan Control + Pase tiene IA ilimitada.
+            </p>
+          </div>
+        </AnimatedSection>
+
       </div>
     </section>
   );
