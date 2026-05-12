@@ -41,14 +41,12 @@ export function Navbar() {
 
           {/* Logo */}
           <Link href="/" className="flex items-center flex-shrink-0">
-            <div style={{ overflow: "hidden", width: 72, height: 58 }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/whet-logo.png"
-                alt="whet studio"
-                style={{ width: 120, height: "auto", transform: "translate(-24px, -34px)" }}
-              />
-            </div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/whet-logo.png"
+              alt="whet studio"
+              style={{ width: 58, height: 58 }}
+            />
           </Link>
 
           {/* Desktop nav */}

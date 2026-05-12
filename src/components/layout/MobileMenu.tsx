@@ -49,14 +49,12 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             height: 58,
           }}
         >
-          <div style={{ overflow: "hidden", width: 84, height: 40 }}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/whet-logo.png"
-              alt="whet studio"
-              style={{ width: 120, height: "auto", transform: "translate(-18px, -19px)" }}
-            />
-          </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/whet-logo.png"
+            alt="whet studio"
+            style={{ width: 58, height: 58 }}
+          />
           <button
             type="button"
             onClick={onClose}
