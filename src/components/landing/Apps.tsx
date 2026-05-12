@@ -54,11 +54,11 @@ export function Apps() {
           </div>
         </AnimatedSection>
 
-        {/* App columns */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-[#D8CFC0]">
+        {/* App columns — border manual para evitar que divide-x estire el grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 lg:items-start divide-y lg:divide-y-0 divide-[#D8CFC0]">
           {apps.map((app, i) => (
             <AnimatedSection key={app.name} delay={i * 0.1}>
-              <div className="py-14 lg:py-16 lg:px-14 first:lg:pl-0 last:lg:pr-0">
+              <div className={`py-14 lg:py-16 ${i === 0 ? "lg:pr-14 lg:border-r border-[#D8CFC0]" : "lg:pl-14"}`}>
                 <div style={{ fontSize: 10, letterSpacing: ".15em", textTransform: "uppercase", color: "#B0A090", marginBottom: 20, fontFamily: "var(--font-dm-sans)" }}>
                   {app.category}
                 </div>
