@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, DM_Sans, Fraunces } from "next/font/google";
+import { Playfair_Display, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -9,13 +9,6 @@ const playfair = Playfair_Display({
   variable: "--font-playfair",
   subsets: ["latin"],
   weight: ["400", "600", "700"],
-  style: ["normal", "italic"],
-});
-
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
-  subsets: ["latin"],
-  weight: ["300", "400", "600", "700", "900"],
   style: ["normal", "italic"],
 });
 
@@ -47,7 +40,7 @@ export default function RootLayout({
       <head>
         <link rel="preload" href="/whet-logo.png" as="image" />
       </head>
-      <body className={`${playfair.variable} ${fraunces.variable} ${dmSans.variable}`}>
+      <body className={`${playfair.variable} ${dmSans.variable}`}>
         <IntroSplash />
         <Navbar />
         <main>{children}</main>
