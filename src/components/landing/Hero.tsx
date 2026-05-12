@@ -2,62 +2,110 @@
 
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 
+const pillars = [
+  "Aperturas y concepto",
+  "Escandallos y food cost",
+  "Procesos y estructura de equipo",
+  "GastroManager · MESA",
+];
+
 export function Hero() {
   return (
     <section
       style={{
         background: "#FAF8F4",
-        display: "flex",
-        alignItems: "center",
         paddingTop: 58,
-        paddingBottom: 80,
         borderBottom: "1px solid #D8CFC0",
+        position: "relative",
+        overflow: "hidden",
       }}
     >
       <div className="mx-auto px-6 lg:px-12 w-full" style={{ maxWidth: 1280 }}>
-        <div style={{ paddingTop: 72 }}>
 
-          <AnimatedSection>
-            <p style={{ fontSize: 11, letterSpacing: ".14em", textTransform: "uppercase", color: "#D4571A", fontWeight: 500, marginBottom: 24, fontFamily: "var(--font-dm-sans)" }}>
-              whet studio · Afilamos restaurantes
-            </p>
-          </AnimatedSection>
+        {/* Main content */}
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-0" style={{ paddingTop: 80, paddingBottom: 72 }}>
 
-          <AnimatedSection delay={0.05}>
-            <h1 style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(40px, 6vw, 84px)", fontWeight: 600, lineHeight: 1.04, letterSpacing: "-.02em", color: "#1A1614", maxWidth: 800, fontFeatureSettings: '"liga" 0, "clig" 0, "dlig" 0' }}>
-              Af{'‌'}ilamos<br />
-              <em style={{ fontStyle: "italic", color: "#C4150A" }}>restaurantes.</em>
-            </h1>
-          </AnimatedSection>
+          {/* Left */}
+          <div style={{ borderRight: "0px" }}>
+            <AnimatedSection>
+              <p style={{ fontSize: 11, letterSpacing: ".15em", textTransform: "uppercase", color: "#D4571A", fontWeight: 500, marginBottom: 28, fontFamily: "var(--font-dm-sans)" }}>
+                whet studio · Consultoría gastronómica y tecnología
+              </p>
+            </AnimatedSection>
 
-          <AnimatedSection delay={0.1}>
-            <p style={{ fontSize: 17, color: "#6B5B4E", lineHeight: 1.72, marginTop: 28, maxWidth: 520, fontFamily: "var(--font-dm-sans)" }}>
-              Consultoría operativa y tecnología propia para restaurantes que quieren funcionar mejor, con más control y menos dependencia de las personas clave.
-            </p>
-          </AnimatedSection>
+            <AnimatedSection delay={0.05}>
+              <h1 style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(44px, 6.5vw, 92px)", fontWeight: 600, lineHeight: 1.02, letterSpacing: "-.025em", color: "#1A1614", maxWidth: 820, fontFeatureSettings: '"liga" 0, "clig" 0, "dlig" 0' }}>
+                Af{'‌'}ilamos<br />
+                <em style={{ fontStyle: "italic", color: "#C4150A" }}>restaurantes.</em>
+              </h1>
+            </AnimatedSection>
 
-          <AnimatedSection delay={0.15}>
-            <div className="flex flex-wrap gap-3 mt-10">
-              <a
-                href="#apps"
-                style={{ display: "inline-flex", alignItems: "center", padding: "13px 28px", borderRadius: 4, fontSize: 14, fontWeight: 500, background: "#C4150A", color: "#fff", textDecoration: "none", transition: "opacity .2s", fontFamily: "var(--font-dm-sans)" }}
-                onMouseEnter={(e) => (e.currentTarget.style.opacity = ".88")}
-                onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
-              >
-                Ver nuestras apps
-              </a>
-              <a
-                href="#contacto"
-                style={{ display: "inline-flex", alignItems: "center", padding: "13px 28px", borderRadius: 4, fontSize: 14, fontWeight: 500, background: "transparent", color: "#1A1614", border: "1.5px solid #C0B8AC", textDecoration: "none", transition: "border-color .2s", fontFamily: "var(--font-dm-sans)" }}
-                onMouseEnter={(e) => (e.currentTarget.style.borderColor = "#1A1614")}
-                onMouseLeave={(e) => (e.currentTarget.style.borderColor = "#C0B8AC")}
-              >
-                Hablar con nosotros
-              </a>
+            <AnimatedSection delay={0.1}>
+              <p style={{ fontSize: 18, color: "#6B5B4E", lineHeight: 1.72, marginTop: 32, maxWidth: 560, fontFamily: "var(--font-dm-sans)", fontWeight: 300 }}>
+                Consultoría operativa y tecnología propia para restaurantes que quieren funcionar mejor — con más control, mejores márgenes y menos dependencia de las personas clave.
+              </p>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.15}>
+              <div className="flex flex-wrap gap-3 mt-10">
+                <a
+                  href="#servicios"
+                  style={{ display: "inline-flex", alignItems: "center", padding: "14px 32px", borderRadius: 4, fontSize: 14, fontWeight: 500, background: "#1A1614", color: "#FAF8F4", textDecoration: "none", transition: "opacity .2s", fontFamily: "var(--font-dm-sans)" }}
+                  onMouseEnter={(e) => (e.currentTarget.style.opacity = ".85")}
+                  onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
+                >
+                  Ver qué hacemos
+                </a>
+                <a
+                  href="#contacto"
+                  style={{ display: "inline-flex", alignItems: "center", padding: "14px 32px", borderRadius: 4, fontSize: 14, fontWeight: 500, background: "transparent", color: "#1A1614", border: "1.5px solid #C0B8AC", textDecoration: "none", transition: "border-color .2s", fontFamily: "var(--font-dm-sans)" }}
+                  onMouseEnter={(e) => (e.currentTarget.style.borderColor = "#1A1614")}
+                  onMouseLeave={(e) => (e.currentTarget.style.borderColor = "#C0B8AC")}
+                >
+                  Hablar con nosotros
+                </a>
+              </div>
+            </AnimatedSection>
+          </div>
+
+          {/* Right — áreas de trabajo, desktop only */}
+          <AnimatedSection delay={0.2} className="hidden lg:flex" >
+            <div style={{ borderLeft: "1px solid #D8CFC0", paddingLeft: 48, paddingTop: 8, display: "flex", flexDirection: "column", justifyContent: "flex-start", gap: 0 }}>
+              <p style={{ fontSize: 10, letterSpacing: ".14em", textTransform: "uppercase", color: "#B0A090", marginBottom: 20, fontFamily: "var(--font-dm-sans)" }}>
+                Áreas de trabajo
+              </p>
+              {pillars.map((p, i) => (
+                <div
+                  key={i}
+                  style={{ padding: "14px 0", borderBottom: i < pillars.length - 1 ? "1px solid #EDE5DA" : undefined }}
+                >
+                  <span style={{ fontSize: 13, color: "#4A3C34", fontFamily: "var(--font-dm-sans)", fontWeight: 400 }}>{p}</span>
+                </div>
+              ))}
             </div>
           </AnimatedSection>
-
         </div>
+
+        {/* Bottom proof bar */}
+        <AnimatedSection delay={0.2}>
+          <div
+            className="flex flex-wrap gap-8 lg:gap-16 py-6"
+            style={{ borderTop: "1px solid #D8CFC0" }}
+          >
+            {[
+              { value: "Apertura", label: "Desde cero hasta primer servicio" },
+              { value: "Consultoría", label: "Operativa, cartas y procesos" },
+              { value: "Tecnología", label: "GastroManager y MESA" },
+              { value: "24h", label: "Tiempo de respuesta" },
+            ].map((item) => (
+              <div key={item.value} style={{ display: "flex", flexDirection: "column", gap: 2 }}>
+                <span style={{ fontFamily: "var(--font-playfair)", fontSize: 15, fontWeight: 600, color: "#1A1614" }}>{item.value}</span>
+                <span style={{ fontSize: 12, color: "#9A8A7A", fontFamily: "var(--font-dm-sans)" }}>{item.label}</span>
+              </div>
+            ))}
+          </div>
+        </AnimatedSection>
+
       </div>
     </section>
   );
