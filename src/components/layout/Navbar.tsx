@@ -6,10 +6,9 @@ import { Menu } from "lucide-react";
 import { MobileMenu } from "./MobileMenu";
 
 const links = [
-  { href: "/#servicios", label: "Consultoría" },
   { href: "/#apps", label: "Apps" },
   { href: "/#para-quien", label: "Para quién" },
-  { href: "/#como-trabajamos", label: "Metodología" },
+  { href: "/#contacto", label: "Contacto" },
 ];
 
 export function Navbar() {
@@ -45,7 +44,7 @@ export function Navbar() {
             <div style={{ overflow: "hidden", width: 72, height: 58 }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/ascualab-logo.png"
+                src="/whet-logo.png"
                 alt="whet studio"
                 style={{ width: 120, height: "auto", transform: "translate(-24px, -34px)" }}
               />

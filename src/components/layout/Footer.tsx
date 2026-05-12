@@ -3,10 +3,12 @@
 import Link from "next/link";
 
 const footerLinks = {
-  Servicios: [
-    { href: "/#servicios", label: "Consultoría" },
-    { href: "/#apps", label: "GastroManager" },
-    { href: "/#apps", label: "MESA" },
+  Apps: [
+    { href: "/apps/gastromanager", label: "GastroManager" },
+    { href: "/apps/mesa", label: "MESA" },
+  ],
+  Empresa: [
+    { href: "/#para-quien", label: "Para quién" },
     { href: "/#contacto", label: "Contacto" },
   ],
   Legal: [
@@ -20,14 +22,14 @@ export function Footer() {
     <footer style={{ background: "#0A0908", borderTop: "1px solid rgba(255,255,255,.08)", padding: "64px 0 40px" }}>
       <div className="mx-auto px-6 lg:px-12" style={{ maxWidth: 1280 }}>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 pb-12" style={{ borderBottom: "1px solid rgba(255,255,255,.08)" }}>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 pb-12" style={{ borderBottom: "1px solid rgba(255,255,255,.08)" }}>
 
           {/* Brand */}
           <div className="md:col-span-1">
             <div style={{ overflow: "hidden", width: 84, height: 40, marginBottom: 16 }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/ascualab-logo.png"
+                src="/whet-logo.png"
                 alt="whet studio"
                 style={{ width: 120, height: "auto", transform: "translate(-18px, -19px)" }}
               />

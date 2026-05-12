@@ -35,7 +35,7 @@ export function IntroSplash() {
       {/* Logo */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src="/ascualab-logo.png"
+        src="/whet-logo.png"
         alt="whet studio"
         style={{
           width: 200,

@@ -4,10 +4,9 @@ import Link from "next/link";
 import { X } from "lucide-react";
 
 const links = [
-  { href: "/#servicios", label: "Consultoría" },
   { href: "/#apps", label: "Apps" },
   { href: "/#para-quien", label: "Para quién" },
-  { href: "/#como-trabajamos", label: "Metodología" },
+  { href: "/#contacto", label: "Contacto" },
 ];
 
 interface MobileMenuProps {
@@ -53,7 +52,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           <div style={{ overflow: "hidden", width: 84, height: 40 }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/ascualab-logo.png"
+              src="/whet-logo.png"
               alt="whet studio"
               style={{ width: 120, height: "auto", transform: "translate(-18px, -19px)" }}
             />
