@@ -33,7 +33,7 @@ export function IntroSplash() {
         pointerEvents: "none",
       }}
     >
-      {/* Logo grande */}
+      {/* Logo grande — visible desde el primer frame */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/whet-logo.png"
@@ -41,8 +41,6 @@ export function IntroSplash() {
         style={{
           width: "min(420px, 72vw)",
           height: "auto",
-          opacity: 0,
-          animation: "introLogoIn 1.4s cubic-bezier(.22,1,.36,1) 0.2s forwards",
         }}
       />
 
