@@ -4,6 +4,7 @@ import Link from "next/link";
 import { X } from "lucide-react";
 
 const links = [
+  { href: "/#servicios", label: "Consultoría" },
   { href: "/#apps", label: "Apps" },
   { href: "/#para-quien", label: "Para quién" },
   { href: "/#contacto", label: "Contacto" },

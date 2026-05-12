@@ -6,6 +6,7 @@ import { Menu } from "lucide-react";
 import { MobileMenu } from "./MobileMenu";
 
 const links = [
+  { href: "/#servicios", label: "Consultoría" },
   { href: "/#apps", label: "Apps" },
   { href: "/#para-quien", label: "Para quién" },
   { href: "/#contacto", label: "Contacto" },
