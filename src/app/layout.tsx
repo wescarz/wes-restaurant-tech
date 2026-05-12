@@ -37,6 +37,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
+      <head>
+        <link rel="preload" href="/whet-logo.png" as="image" />
+      </head>
       <body className={`${playfair.variable} ${dmSans.variable}`}>
         <IntroSplash />
         <Navbar />
