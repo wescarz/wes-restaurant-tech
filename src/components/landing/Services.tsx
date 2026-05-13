@@ -57,6 +57,20 @@ const services = [
     ],
     outcome: "El restaurante funciona cuando tú no estás. Sin que todo dependa de ti.",
   },
+  {
+    n: "05",
+    title: "Proveedores y formación de equipo",
+    intro: "Construimos la red de proveedores adecuada para cada negocio y formamos al equipo para que opere con autonomía — dos palancas que definen la calidad y la consistencia de un restaurante.",
+    bullets: [
+      "Auditoría de proveedores actuales: calidad, precio y condiciones reales",
+      "Búsqueda, selección y negociación de proveedores estratégicos",
+      "Protocolos de recepción, control de calidad y gestión de pedidos",
+      "Programas de formación a medida para cocina y sala",
+      "Formación en producto, técnica y estándares de servicio",
+      "Evaluación continua y planes de mejora individualizados por perfil",
+    ],
+    outcome: "El equipo sabe lo que hace. Los proveedores entregan lo que necesitas, cuando lo necesitas.",
+  },
 ];
 
 export function Services() {
