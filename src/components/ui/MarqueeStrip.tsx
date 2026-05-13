@@ -17,29 +17,15 @@ function Separator() {
   );
 }
 
-function WhetBadge() {
+function WhetLogo() {
   return (
-    <span style={{ display: "inline-flex", alignItems: "baseline", gap: 5, margin: "0 8px", flexShrink: 0 }}>
-      <span style={{
-        fontFamily: "var(--font-playfair)",
-        fontSize: 16,
-        fontWeight: 600,
-        fontStyle: "italic",
-        color: "#FAF8F4",
-        letterSpacing: "-.01em",
-      }}>
-        whet
-      </span>
-      <span style={{
-        fontFamily: "var(--font-dm-sans)",
-        fontSize: 8,
-        fontWeight: 400,
-        letterSpacing: ".22em",
-        textTransform: "uppercase",
-        color: "#5A4A3A",
-      }}>
-        studio
-      </span>
+    <span style={{ display: "inline-block", width: 72, height: 29, overflow: "hidden", flexShrink: 0, margin: "0 4px", verticalAlign: "middle" }}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/whet-logo.png"
+        alt="whet studio"
+        style={{ width: 72, height: "auto", transform: "translate(0px, -21px)" }}
+      />
     </span>
   );
 }
@@ -62,7 +48,7 @@ function Strip() {
           {i % 3 === 2 ? (
             <>
               <Separator />
-              <WhetBadge />
+              <WhetLogo />
               <Separator />
             </>
           ) : (
