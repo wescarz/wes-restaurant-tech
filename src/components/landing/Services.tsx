@@ -75,12 +75,12 @@ const services = [
 
 export function Services() {
   return (
-    <section id="servicios" style={{ background: "#F2EDE4", borderBottom: "1px solid #D8CFC0", padding: "96px 0" }}>
+    <section id="servicios" className="py-16 lg:py-24" style={{ background: "#F2EDE4", borderBottom: "1px solid #D8CFC0" }}>
       <div className="mx-auto px-6 lg:px-12" style={{ maxWidth: 1280 }}>
 
         {/* Header */}
         <AnimatedSection>
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_480px] gap-12 lg:gap-24 pb-16" style={{ borderBottom: "1px solid #D8CFC0" }}>
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_480px] gap-8 lg:gap-24 pb-10 lg:pb-16" style={{ borderBottom: "1px solid #D8CFC0" }}>
             <div>
               <p style={{ fontSize: 11, letterSpacing: ".14em", textTransform: "uppercase", color: "#D4571A", fontWeight: 500, marginBottom: 20, fontFamily: "var(--font-dm-sans)" }}>
                 Consultoría gastronómica
@@ -106,7 +106,7 @@ export function Services() {
           {services.map((srv, i) => (
             <AnimatedSection key={srv.n} delay={i * 0.06}>
               <div
-                className="grid grid-cols-1 lg:grid-cols-[120px_1fr_360px] gap-6 lg:gap-12 py-12"
+                className="grid grid-cols-1 lg:grid-cols-[120px_1fr_360px] gap-5 lg:gap-12 py-8 lg:py-12"
                 style={{ borderBottom: "1px solid #D8CFC0" }}
               >
                 {/* Number */}

@@ -23,7 +23,7 @@ export default function TerminosPage() {
           Las suscripciones a GastroManager se facturan mediante Stripe según el plan elegido (mensual o anual). El usuario es responsable de mantener la confidencialidad de su cuenta y de todas las actividades que se realicen con ella. Nos reservamos el derecho de suspender o dar de baja cuentas que incumplan estos términos o un uso abusivo del servicio.
         </p>
         <p className="mt-4 text-[var(--text-secondary)]">
-          Los contenidos de la web (textos, imágenes, marcas) son propiedad de Wes Restaurant Tech o de sus licenciantes y no pueden reproducirse sin autorización. Para cualquier cuestión legal: info@wesrestauranttech.com.
+          Los contenidos de la web (textos, imágenes, marcas) son propiedad de whet studio o de sus licenciantes y no pueden reproducirse sin autorización. Para cualquier cuestión legal: wes@whet.es.
         </p>
       </div>
     </div>

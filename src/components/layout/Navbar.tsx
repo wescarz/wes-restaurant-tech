@@ -84,7 +84,7 @@ export function Navbar() {
             type="button"
             onClick={() => setMobileOpen(true)}
             className="lg:hidden"
-            style={{ padding: 8, color: "#F0EAE0", background: "none", border: "none", cursor: "pointer" }}
+            style={{ padding: 10, color: "#F0EAE0", background: "none", border: "none", cursor: "pointer" }}
             aria-label="Abrir menú"
           >
             <Menu size={24} />

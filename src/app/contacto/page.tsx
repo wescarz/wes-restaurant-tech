@@ -19,10 +19,10 @@ export default function ContactoPage() {
           <p className="mt-6 text-sm text-[var(--text-secondary)]">
             Email:{" "}
             <a
-              href="mailto:info@wesrestauranttech.com"
+              href="mailto:wes@whet.es"
               className="text-[var(--accent)] hover:underline"
             >
-              info@wesrestauranttech.com
+              wes@whet.es
             </a>
           </p>
           <div className="mt-8">

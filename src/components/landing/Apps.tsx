@@ -34,12 +34,12 @@ const apps = [
 
 export function Apps() {
   return (
-    <section id="apps" style={{ background: "#FAF8F4", padding: "80px 0", borderBottom: "1px solid #D8CFC0" }}>
+    <section id="apps" className="py-14 lg:py-20" style={{ background: "#FAF8F4", borderBottom: "1px solid #D8CFC0" }}>
       <div className="mx-auto px-6 lg:px-12" style={{ maxWidth: 1280 }}>
 
         {/* Intro */}
         <AnimatedSection>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 pb-16" style={{ borderBottom: "1px solid #D8CFC0" }}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-20 pb-10 lg:pb-16" style={{ borderBottom: "1px solid #D8CFC0" }}>
             <div>
               <p style={{ fontSize: 11, letterSpacing: ".14em", textTransform: "uppercase", color: "#D4571A", fontWeight: 500, marginBottom: 20, fontFamily: "var(--font-dm-sans)" }}>
                 Herramientas propias
@@ -58,7 +58,7 @@ export function Apps() {
         <div className="grid grid-cols-1 lg:grid-cols-2 lg:items-start divide-y lg:divide-y-0 divide-[#D8CFC0]">
           {apps.map((app, i) => (
             <AnimatedSection key={app.name} delay={i * 0.1}>
-              <div className={`py-14 lg:py-16 ${i === 0 ? "lg:pr-14 lg:border-r border-[#D8CFC0]" : "lg:pl-14"}`}>
+              <div className={`py-10 lg:py-16 ${i === 0 ? "lg:pr-14 lg:border-r border-[#D8CFC0]" : "lg:pl-14"}`}>
                 <div style={{ fontSize: 10, letterSpacing: ".15em", textTransform: "uppercase", color: "#B0A090", marginBottom: 20, fontFamily: "var(--font-dm-sans)" }}>
                   {app.category}
                 </div>

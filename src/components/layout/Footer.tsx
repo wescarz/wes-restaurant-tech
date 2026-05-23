@@ -19,10 +19,10 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer style={{ background: "#0A0908", borderTop: "1px solid rgba(255,255,255,.08)", padding: "64px 0 40px" }}>
+    <footer className="pt-10 pb-8 lg:pt-16 lg:pb-10" style={{ background: "#0A0908", borderTop: "1px solid rgba(255,255,255,.08)" }}>
       <div className="mx-auto px-6 lg:px-12" style={{ maxWidth: 1280 }}>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 pb-12" style={{ borderBottom: "1px solid rgba(255,255,255,.08)" }}>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 lg:gap-12 pb-8 lg:pb-12" style={{ borderBottom: "1px solid rgba(255,255,255,.08)" }}>
 
           {/* Brand */}
           <div className="md:col-span-1">

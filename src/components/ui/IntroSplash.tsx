@@ -50,7 +50,7 @@ export function IntroSplash() {
       <p
         style={{
           fontFamily: "var(--font-dm-sans)",
-          fontSize: "clamp(10px, 1.2vw, 13px)",
+          fontSize: "clamp(11px, 2vw, 13px)",
           letterSpacing: ".28em",
           textTransform: "uppercase",
           color: "#6A605A",

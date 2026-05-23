@@ -9,14 +9,14 @@ const profiles = [
 
 export function ForWho() {
   return (
-    <section id="para-quien" style={{ background: "#F2EDE4", padding: "72px 0", borderBottom: "1px solid #D8CFC0" }}>
+    <section id="para-quien" className="py-12 lg:py-[72px]" style={{ background: "#F2EDE4", borderBottom: "1px solid #D8CFC0" }}>
       <div className="mx-auto px-6 lg:px-12" style={{ maxWidth: 1280 }}>
 
         <AnimatedSection>
           <p style={{ fontSize: 11, letterSpacing: ".14em", textTransform: "uppercase", color: "#D4571A", fontWeight: 500, marginBottom: 16, fontFamily: "var(--font-dm-sans)" }}>
             Para quién es whet studio
           </p>
-          <h2 style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(26px, 3.5vw, 44px)", fontWeight: 600, lineHeight: 1.12, color: "#1A1614", marginBottom: 48 }}>
+          <h2 style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(26px, 3.5vw, 44px)", fontWeight: 600, lineHeight: 1.12, color: "#1A1614", marginBottom: 32 }}>
             No trabajamos para todos.<br />
             Trabajamos para <em style={{ fontStyle: "italic", color: "#C4150A" }}>quien lo necesita de verdad.</em>
           </h2>

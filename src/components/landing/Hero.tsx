@@ -35,7 +35,7 @@ export function Hero() {
       <div className="mx-auto px-6 lg:px-12 w-full" style={{ maxWidth: 1280 }}>
 
         {/* Main content */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-0" style={{ paddingTop: 80, paddingBottom: 72 }}>
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-0 pt-10 pb-10 lg:pt-20 lg:pb-[72px]">
 
           {/* Left */}
           <div style={{ borderRight: "0px" }}>
@@ -53,16 +53,16 @@ export function Hero() {
             </AnimatedSection>
 
             <AnimatedSection delay={0.1}>
-              <p style={{ fontSize: 18, color: "#6B5B4E", lineHeight: 1.72, marginTop: 32, maxWidth: 560, fontFamily: "var(--font-dm-sans)", fontWeight: 300 }}>
+              <p style={{ fontSize: "clamp(16px, 2vw, 18px)", color: "#6B5B4E", lineHeight: 1.72, marginTop: 24, maxWidth: 560, fontFamily: "var(--font-dm-sans)", fontWeight: 300 }}>
                 Consultoría operativa y tecnología propia para restaurantes que quieren funcionar mejor — con más control, mejores márgenes y menos dependencia de las personas clave.
               </p>
             </AnimatedSection>
 
             <AnimatedSection delay={0.15}>
-              <div className="flex flex-wrap gap-3 mt-10">
+              <div className="flex flex-wrap gap-3 mt-8 lg:mt-10">
                 <a
                   href="#servicios"
-                  style={{ display: "inline-flex", alignItems: "center", padding: "14px 32px", borderRadius: 4, fontSize: 14, fontWeight: 500, background: "#1A1614", color: "#FAF8F4", textDecoration: "none", transition: "opacity .2s", fontFamily: "var(--font-dm-sans)" }}
+                  style={{ display: "inline-flex", alignItems: "center", padding: "16px 28px", borderRadius: 4, fontSize: 14, fontWeight: 500, background: "#1A1614", color: "#FAF8F4", textDecoration: "none", transition: "opacity .2s", fontFamily: "var(--font-dm-sans)" }}
                   onMouseEnter={(e) => (e.currentTarget.style.opacity = ".85")}
                   onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
                 >
@@ -102,7 +102,7 @@ export function Hero() {
         {/* Bottom proof bar */}
         <AnimatedSection delay={0.2}>
           <div
-            className="flex flex-wrap gap-8 lg:gap-16 py-6"
+            className="grid grid-cols-2 sm:flex sm:flex-wrap gap-4 sm:gap-8 lg:gap-16 py-6"
             style={{ borderTop: "1px solid #D8CFC0" }}
           >
             {[

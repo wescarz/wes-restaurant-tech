@@ -6,7 +6,7 @@ if (!process.env.RESEND_API_KEY) {
 
 export const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 
-const FROM_EMAIL = process.env.FROM_EMAIL ?? "Wes Restaurant Tech <info@wesrestauranttech.com>";
+const FROM_EMAIL = process.env.FROM_EMAIL ?? "whet studio <wes@whet.es>";
 
 export async function sendContactEmail(data: {
   name: string;
@@ -19,9 +19,9 @@ export async function sendContactEmail(data: {
   if (!resend) return { error: new Error("Resend not configured") };
   return resend.emails.send({
     from: FROM_EMAIL,
-    to: process.env.CONTACT_EMAIL ?? "info@wesrestauranttech.com",
+    to: process.env.CONTACT_EMAIL ?? "wes@whet.es",
     replyTo: data.email,
-    subject: `[Wes Restaurant Tech] Contacto: ${data.type} - ${data.name}`,
+    subject: `[whet studio] Contacto: ${data.type} - ${data.name}`,
     html: `
       <h2>Nuevo contacto</h2>
       <p><strong>Nombre:</strong> ${data.name}</p>
@@ -40,11 +40,11 @@ export async function sendContactConfirmation(to: string, name: string) {
   return resend.emails.send({
     from: FROM_EMAIL,
     to,
-    subject: "Hemos recibido tu mensaje | Wes Restaurant Tech",
+    subject: "Hemos recibido tu mensaje | whet studio",
     html: `
       <p>Hola ${name},</p>
       <p>Hemos recibido tu mensaje. Te responderemos en breve.</p>
-      <p>— El equipo de Wes Restaurant Tech</p>
+      <p>— whet studio</p>
     `,
   });
 }

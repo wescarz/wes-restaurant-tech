@@ -11,16 +11,16 @@ const steps = [
 
 export function CTA() {
   return (
-    <section id="contacto" style={{ background: "#FAF8F4", padding: "96px 0 80px" }}>
+    <section id="contacto" className="pt-14 pb-12 lg:pt-24 lg:pb-20" style={{ background: "#FAF8F4" }}>
       <div className="mx-auto px-6 lg:px-12" style={{ maxWidth: 1280 }}>
 
         {/* Process steps */}
         <AnimatedSection>
-          <div style={{ marginBottom: 80 }}>
+          <div className="mb-12 lg:mb-20">
             <p style={{ fontSize: 11, letterSpacing: ".14em", textTransform: "uppercase", color: "#D4571A", fontWeight: 500, marginBottom: 16, fontFamily: "var(--font-dm-sans)" }}>
               Cómo empezamos
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" style={{ borderLeft: "1px solid #D8CFC0" }}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" style={{ borderLeft: "1px solid #D8CFC0", borderTop: "1px solid #D8CFC0" }}>
               {steps.map((step) => (
                 <div key={step.n} style={{ padding: "20px 24px", borderRight: "1px solid #D8CFC0", borderBottom: "1px solid #D8CFC0" }}>
                   <div style={{ fontFamily: "var(--font-playfair)", fontSize: 11, color: "#C4150A", fontWeight: 600, letterSpacing: ".1em", marginBottom: 10 }}>
@@ -37,7 +37,7 @@ export function CTA() {
 
         {/* Main CTA */}
         <AnimatedSection>
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-12 pt-14" style={{ borderTop: "3px solid #C4150A" }}>
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-8 lg:gap-12 pt-10 lg:pt-14" style={{ borderTop: "3px solid #C4150A" }}>
 
             {/* Left */}
             <div>
@@ -68,7 +68,7 @@ export function CTA() {
             {/* Right */}
             <div className="flex flex-col gap-4 lg:justify-center">
               <a
-                href="mailto:hola@whetstudio.com"
+                href="mailto:wes@whet.es"
                 style={{ padding: "18px 32px", background: "#1A1614", color: "#FAF8F4", borderRadius: 4, fontSize: 15, fontWeight: 500, textDecoration: "none", textAlign: "center", transition: "opacity .2s", display: "block", fontFamily: "var(--font-dm-sans)" }}
                 onMouseEnter={(e) => (e.currentTarget.style.opacity = ".85")}
                 onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
@@ -84,7 +84,7 @@ export function CTA() {
                 Ver apps primero
               </a>
               <p style={{ fontSize: 12, color: "#B0A090", textAlign: "center", fontFamily: "var(--font-dm-sans)", marginTop: 4 }}>
-                hola@whetstudio.com
+                wes@whet.es
               </p>
             </div>
 
