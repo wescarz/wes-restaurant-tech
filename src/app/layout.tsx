@@ -28,6 +28,11 @@ export const metadata: Metadata = {
   title: "whet studio — Afilamos restaurantes",
   description:
     "Consultoría gastronómica y tecnología propia para restaurantes. GastroManager, MESA y más. Abrimos, ordenamos y optimizamos restaurantes.",
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+  },
   openGraph: {
     title: "whet studio — Afilamos restaurantes",
     description:
@@ -44,6 +49,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
+        <link rel="icon" type="image/svg+xml" href="/icon.svg" />
         <link rel="preload" href="/whet-logo.png" as="image" />
       </head>
       <body className={`${playfair.variable} ${dmSans.variable}`}>
