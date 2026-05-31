@@ -2,25 +2,37 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { Menu } from "lucide-react";
 import { MobileMenu } from "./MobileMenu";
 
 const links = [
-  { href: "/#servicios", label: "Consultoría" },
-  { href: "/#apps", label: "Apps" },
-  { href: "/#para-quien", label: "Para quién" },
-  { href: "/#contacto", label: "Contacto" },
+  { id: "servicios", label: "Consultoría" },
+  { id: "apps", label: "Apps" },
+  { id: "para-quien", label: "Para quién" },
+  { id: "contacto", label: "Contacto" },
 ];
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", handler, { passive: true });
     return () => window.removeEventListener("scroll", handler);
   }, []);
+
+  function handleNavClick(e: React.MouseEvent<HTMLAnchorElement>, id: string) {
+    e.preventDefault();
+    if (pathname === "/") {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      router.push(`/#${id}`);
+    }
+  }
 
   return (
     <>
@@ -55,28 +67,30 @@ export function Navbar() {
           {/* Desktop nav */}
           <nav className="hidden lg:flex items-center" style={{ gap: 36 }}>
             {links.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
+              <a
+                key={link.id}
+                href={`/#${link.id}`}
+                onClick={(e) => handleNavClick(e, link.id)}
                 style={{ fontSize: 13, color: "#8A8078", textDecoration: "none", letterSpacing: ".01em", transition: "color .2s" }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = "#F0EAE0")}
                 onMouseLeave={(e) => (e.currentTarget.style.color = "#8A8078")}
               >
                 {link.label}
-              </Link>
+              </a>
             ))}
           </nav>
 
           {/* CTA */}
           <div className="hidden lg:block">
-            <Link
+            <a
               href="/#contacto"
+              onClick={(e) => handleNavClick(e, "contacto")}
               style={{ fontSize: 13, fontWeight: 500, padding: "9px 20px", border: "1.5px solid rgba(240,234,224,.25)", borderRadius: 4, color: "#F0EAE0", textDecoration: "none", transition: "all .2s", background: "transparent", fontFamily: "var(--font-dm-sans)" }}
               onMouseEnter={(e) => { e.currentTarget.style.background = "#F0EAE0"; e.currentTarget.style.color = "#0A0908"; }}
               onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#F0EAE0"; }}
             >
               Solicitar diagnóstico
-            </Link>
+            </a>
           </div>
 
           {/* Mobile hamburger */}

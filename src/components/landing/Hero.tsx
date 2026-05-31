@@ -62,6 +62,7 @@ export function Hero() {
               <div className="flex flex-wrap gap-3 mt-8 lg:mt-10">
                 <a
                   href="#servicios"
+                  onClick={(e) => { e.preventDefault(); document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" }); }}
                   style={{ display: "inline-flex", alignItems: "center", padding: "16px 28px", borderRadius: 4, fontSize: 14, fontWeight: 500, background: "#1A1614", color: "#FAF8F4", textDecoration: "none", transition: "opacity .2s", fontFamily: "var(--font-dm-sans)" }}
                   onMouseEnter={(e) => (e.currentTarget.style.opacity = ".85")}
                   onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
@@ -70,6 +71,7 @@ export function Hero() {
                 </a>
                 <a
                   href="#contacto"
+                  onClick={(e) => { e.preventDefault(); document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" }); }}
                   style={{ display: "inline-flex", alignItems: "center", padding: "14px 32px", borderRadius: 4, fontSize: 14, fontWeight: 500, background: "transparent", color: "#1A1614", border: "1.5px solid #C0B8AC", textDecoration: "none", transition: "border-color .2s", fontFamily: "var(--font-dm-sans)" }}
                   onMouseEnter={(e) => (e.currentTarget.style.borderColor = "#1A1614")}
                   onMouseLeave={(e) => (e.currentTarget.style.borderColor = "#C0B8AC")}

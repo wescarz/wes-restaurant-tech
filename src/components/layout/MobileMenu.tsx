@@ -1,13 +1,13 @@
 "use client";
 
-import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { X } from "lucide-react";
 
 const links = [
-  { href: "/#servicios", label: "Consultoría" },
-  { href: "/#apps", label: "Apps" },
-  { href: "/#para-quien", label: "Para quién" },
-  { href: "/#contacto", label: "Contacto" },
+  { id: "servicios", label: "Consultoría" },
+  { id: "apps", label: "Apps" },
+  { id: "para-quien", label: "Para quién" },
+  { id: "contacto", label: "Contacto" },
 ];
 
 interface MobileMenuProps {
@@ -16,6 +16,21 @@ interface MobileMenuProps {
 }
 
 export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
+  const pathname = usePathname();
+  const router = useRouter();
+
+  function handleNavClick(e: React.MouseEvent<HTMLAnchorElement>, id: string) {
+    e.preventDefault();
+    onClose();
+    if (pathname === "/") {
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      }, 50);
+    } else {
+      router.push(`/#${id}`);
+    }
+  }
+
   if (!isOpen) return null;
 
   return (
@@ -70,10 +85,10 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
 
         <nav style={{ display: "flex", flexDirection: "column", padding: "24px" }}>
           {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={onClose}
+            <a
+              key={link.id}
+              href={`/#${link.id}`}
+              onClick={(e) => handleNavClick(e, link.id)}
               style={{
                 padding: "14px 0",
                 fontSize: 17,
@@ -85,11 +100,11 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               }}
             >
               {link.label}
-            </Link>
+            </a>
           ))}
-          <Link
+          <a
             href="/#contacto"
-            onClick={onClose}
+            onClick={(e) => handleNavClick(e, "contacto")}
             style={{
               display: "block",
               marginTop: 24,
@@ -105,7 +120,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             }}
           >
             Solicitar diagnóstico
-          </Link>
+          </a>
         </nav>
       </div>
     </div>

@@ -163,6 +163,7 @@ export function Services() {
               </p>
               <a
                 href="#contacto"
+                onClick={(e) => { e.preventDefault(); document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" }); }}
                 style={{ display: "inline-flex", alignItems: "center", gap: 8, fontSize: 14, fontWeight: 500, color: "#1A1614", fontFamily: "var(--font-dm-sans)", textDecoration: "none", borderBottom: "1.5px solid #1A1614", paddingBottom: 2 }}
               >
                 Solicitar diagnóstico →

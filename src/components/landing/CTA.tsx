@@ -77,6 +77,7 @@ export function CTA() {
               </a>
               <a
                 href="#apps"
+                onClick={(e) => { e.preventDefault(); document.getElementById("apps")?.scrollIntoView({ behavior: "smooth" }); }}
                 style={{ padding: "16px 28px", background: "transparent", color: "#6B5B4E", border: "1.5px solid #D8CFC0", borderRadius: 4, fontSize: 14, textDecoration: "none", textAlign: "center", display: "block", transition: "all .2s", fontFamily: "var(--font-dm-sans)" }}
                 onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#1A1614"; e.currentTarget.style.color = "#1A1614"; }}
                 onMouseLeave={(e) => { e.currentTarget.style.borderColor = "#D8CFC0"; e.currentTarget.style.color = "#6B5B4E"; }}
