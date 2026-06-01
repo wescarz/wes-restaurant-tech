@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 
 const apps = [
@@ -15,7 +14,7 @@ const apps = [
       { title: "Recetario digital vivo", text: "Fichas técnicas exportables en PDF para cocina y auditorías. Subrecetas, porciones y mermas actualizadas automáticamente con el precio de los proveedores." },
       { title: "IA para análisis operativo", text: "Detecta desviaciones, automatiza tareas repetitivas y digitaliza documentos. Datos útiles para decidir, no para reportar." },
     ],
-    href: "/apps/gastromanager",
+    href: "https://app.whet.es",
     cta: "Ver GastroManager →",
   },
 ];
@@ -78,14 +77,16 @@ export function Apps() {
                   ))}
                 </div>
 
-                <Link
+                <a
                   href={app.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   style={{ display: "inline-flex", alignItems: "center", padding: "12px 24px", borderRadius: 4, fontSize: 14, fontWeight: 500, background: "transparent", color: "#1A1614", border: "1.5px solid #C0B8AC", textDecoration: "none", transition: "border-color .2s", fontFamily: "var(--font-dm-sans)" }}
                   onMouseEnter={(e) => (e.currentTarget.style.borderColor = "#1A1614")}
                   onMouseLeave={(e) => (e.currentTarget.style.borderColor = "#C0B8AC")}
                 >
                   {app.cta}
-                </Link>
+                </a>
               </div>
             </AnimatedSection>
           ))}
