@@ -76,7 +76,7 @@ export function CTA() {
                 Solicitar diagnóstico gratuito
               </a>
               <a
-                href="https://wa.me/34612345678"
+                href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? ""}?text=Hola%20Wes%2C%20he%20visto%20Whet%20Studio%20y%20quiero%20hacer%20un%20diagn%C3%B3stico%20para%20mi%20restaurante.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ padding: "16px 28px", background: "transparent", color: "#1A1614", border: "1.5px solid #D8CFC0", borderRadius: 4, fontSize: 14, textDecoration: "none", textAlign: "center", display: "block", transition: "all .2s", fontFamily: "var(--font-dm-sans)" }}

@@ -11,9 +11,10 @@ interface ContactFormProps {
 }
 
 const defaultTypes = [
-  { value: "consultoria", label: "Consultoría" },
-  { value: "demo", label: "Solicitar demo" },
-  { value: "desarrollo", label: "Desarrollo tech" },
+  { value: "consultoria", label: "Consultoría gastronómica" },
+  { value: "demo", label: "Demo de GastroManager o MESA" },
+  { value: "apertura", label: "Apertura de restaurante" },
+  { value: "foodcost", label: "Food cost y escandallos" },
 ];
 
 export function ContactForm({
@@ -27,6 +28,17 @@ export function ContactForm({
     e.preventDefault();
     const form = e.currentTarget;
     const fd = new FormData(form);
+
+    // Honeypot — bots fill this field, humans don't see it
+    if (fd.get("_website")) return;
+
+    const email = (fd.get("email") as string) ?? "";
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setStatus("error");
+      return;
+    }
+
     setStatus("loading");
     try {
       const res = await fetch("/api/contact", {
@@ -34,11 +46,12 @@ export function ContactForm({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           name: fd.get("name"),
-          email: fd.get("email"),
+          email,
           phone: fd.get("phone") || undefined,
           company: showCompany ? fd.get("company") : undefined,
           message: fd.get("message"),
           type: fd.get("type"),
+          _hp: fd.get("_website") || "",
         }),
       });
       if (!res.ok) throw new Error("Error al enviar");
@@ -51,13 +64,18 @@ export function ContactForm({
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
+      {/* Honeypot — visually hidden, never filled by real users */}
+      <div aria-hidden="true" style={{ position: "absolute", left: "-9999px", width: 1, height: 1, overflow: "hidden" }}>
+        <input name="_website" type="text" tabIndex={-1} autoComplete="off" />
+      </div>
+
       <div className="grid gap-4 sm:grid-cols-2">
-        <Input name="name" placeholder="Nombre *" required />
-        <Input name="email" type="email" placeholder="Email *" required />
+        <Input name="name" placeholder="Nombre *" required maxLength={100} />
+        <Input name="email" type="email" placeholder="Email *" required maxLength={150} />
       </div>
       <div className="grid gap-4 sm:grid-cols-2">
-        <Input name="phone" type="tel" placeholder="Teléfono" />
-        {showCompany && <Input name="company" placeholder="Empresa" />}
+        <Input name="phone" type="tel" placeholder="Teléfono" maxLength={20} />
+        {showCompany && <Input name="company" placeholder="Restaurante / empresa" maxLength={120} />}
       </div>
       <div>
         <label className="mb-2 block text-sm text-[var(--text-secondary)]">Tipo de consulta</label>
@@ -73,12 +91,12 @@ export function ContactForm({
           ))}
         </select>
       </div>
-      <Textarea name="message" placeholder="Mensaje *" required />
+      <Textarea name="message" placeholder="Cuéntanos tu situación *" required maxLength={2000} />
       {status === "success" && (
-        <p className="text-sm text-[var(--success)]">Mensaje enviado. Te responderemos pronto.</p>
+        <p className="text-sm text-[var(--success)]">Mensaje enviado. Respondemos en menos de 24h.</p>
       )}
       {status === "error" && (
-        <p className="text-sm text-red-400">Error al enviar. Inténtalo de nuevo o escríbenos por WhatsApp.</p>
+        <p className="text-sm text-red-400">Error al enviar. Escríbenos por WhatsApp o a wes@whet.es.</p>
       )}
       <Button type="submit" disabled={status === "loading"}>
         {status === "loading" ? "Enviando…" : submitLabel}

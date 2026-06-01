@@ -3,7 +3,8 @@
 import { MessageCircle } from "lucide-react";
 import { ContactForm } from "@/components/shared/ContactForm";
 
-const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "34612345678";
+const WA_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "";
+const WA_MSG = "Hola%20Wes%2C%20he%20visto%20Whet%20Studio%20y%20quiero%20hacer%20un%20diagn%C3%B3stico%20para%20mi%20restaurante.";
 
 export default function ContactoPage() {
   return (
@@ -19,7 +20,7 @@ export default function ContactoPage() {
 
           <div className="mt-8 flex flex-col gap-4">
             <a
-              href={`https://wa.me/${WHATSAPP_NUMBER.replace(/\D/g, "")}`}
+              href={`https://wa.me/${WA_NUMBER}?text=${WA_MSG}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 rounded-lg bg-[var(--success)] px-5 py-4 text-white font-medium hover:opacity-90 transition-opacity w-fit"
@@ -69,7 +70,7 @@ export default function ContactoPage() {
       </div>
 
       <a
-        href={`https://wa.me/${WHATSAPP_NUMBER.replace(/\D/g, "")}`}
+        href={`https://wa.me/${WA_NUMBER}?text=${WA_MSG}`}
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[var(--success)] text-white shadow-lg hover:opacity-90 transition-opacity"

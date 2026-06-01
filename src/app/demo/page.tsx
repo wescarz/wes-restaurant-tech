@@ -5,7 +5,8 @@ import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 
-const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "34612345678";
+const WA_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "";
+const WA_MSG = "Hola%20Wes%2C%20he%20visto%20Whet%20Studio%20y%20quiero%20hacer%20un%20diagn%C3%B3stico%20para%20mi%20restaurante.";
 
 export default function DemoPage() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -88,7 +89,7 @@ export default function DemoPage() {
       <div className="text-center rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-8">
         <p className="text-[var(--text-secondary)] mb-4">O escríbenos por WhatsApp</p>
         <a
-          href={`https://wa.me/${WHATSAPP_NUMBER.replace(/\D/g, "")}`}
+          href={`https://wa.me/${WA_NUMBER}?text=${WA_MSG}`}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 rounded-lg bg-[var(--success)] px-6 py-3 text-white hover:opacity-90"
@@ -98,11 +99,6 @@ export default function DemoPage() {
         </a>
       </div>
 
-      <div className="mt-12 rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-8 text-center">
-        <p className="text-[var(--text-secondary)] text-sm">
-          Calendly: integra aquí un embed de Calendly para agendar videollamada si lo deseas.
-        </p>
-      </div>
     </div>
   );
 }

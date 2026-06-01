@@ -8,6 +8,15 @@ export const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND
 
 const FROM_EMAIL = process.env.FROM_EMAIL ?? "whet studio <wes@whet.es>";
 
+function escapeHtml(str: string): string {
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#x27;");
+}
+
 export async function sendContactEmail(data: {
   name: string;
   email: string;
@@ -21,16 +30,16 @@ export async function sendContactEmail(data: {
     from: FROM_EMAIL,
     to: process.env.CONTACT_EMAIL ?? "wes@whet.es",
     replyTo: data.email,
-    subject: `[whet studio] Contacto: ${data.type} - ${data.name}`,
+    subject: `[whet studio] Contacto: ${escapeHtml(data.type)} — ${escapeHtml(data.name)}`,
     html: `
-      <h2>Nuevo contacto</h2>
-      <p><strong>Nombre:</strong> ${data.name}</p>
-      <p><strong>Email:</strong> ${data.email}</p>
-      ${data.phone ? `<p><strong>Teléfono:</strong> ${data.phone}</p>` : ""}
-      ${data.company ? `<p><strong>Empresa:</strong> ${data.company}</p>` : ""}
-      <p><strong>Tipo:</strong> ${data.type}</p>
+      <h2>Nuevo contacto desde whet.es</h2>
+      <p><strong>Nombre:</strong> ${escapeHtml(data.name)}</p>
+      <p><strong>Email:</strong> ${escapeHtml(data.email)}</p>
+      ${data.phone ? `<p><strong>Teléfono:</strong> ${escapeHtml(data.phone)}</p>` : ""}
+      ${data.company ? `<p><strong>Empresa:</strong> ${escapeHtml(data.company)}</p>` : ""}
+      <p><strong>Tipo:</strong> ${escapeHtml(data.type)}</p>
       <p><strong>Mensaje:</strong></p>
-      <p>${data.message.replace(/\n/g, "<br>")}</p>
+      <p>${escapeHtml(data.message).replace(/\n/g, "<br>")}</p>
     `,
   });
 }
@@ -42,8 +51,8 @@ export async function sendContactConfirmation(to: string, name: string) {
     to,
     subject: "Hemos recibido tu mensaje | whet studio",
     html: `
-      <p>Hola ${name},</p>
-      <p>Hemos recibido tu mensaje. Te responderemos en breve.</p>
+      <p>Hola ${escapeHtml(name)},</p>
+      <p>Hemos recibido tu mensaje. Te responderemos en menos de 24 horas.</p>
       <p>— whet studio</p>
     `,
   });

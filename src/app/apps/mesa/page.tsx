@@ -1,4 +1,4 @@
-import { ShoppingCart, Truck, Package, MessageCircle } from "lucide-react";
+import { CalendarCheck, Users, Star, MessageCircle, QrCode, Heart } from "lucide-react";
 import { Card, CardTitle, CardDescription } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { createMetadata } from "@/components/shared/SEO";
@@ -6,30 +6,40 @@ import { createMetadata } from "@/components/shared/SEO";
 export const metadata = createMetadata({
   title: "MESA — Reservas, CRM y fidelización para restaurantes",
   description:
-    "Plataforma de reservas, CRM de clientes y fidelización para restaurantes. Gestión de reputación online, menús QR y comunicación automática. Más ocupación, más recurrencia.",
+    "Plataforma de crecimiento para restaurantes: reservas online, CRM de clientes, fidelización, gestión de reseñas, menú QR y IA para WhatsApp e Instagram. Más ocupación, más recurrencia.",
   path: "/apps/mesa",
 });
 
 const features = [
   {
-    icon: ShoppingCart,
-    title: "Pedidos rápidos",
-    description: "Registra pedidos a proveedores en segundos y envíalos por email o integración.",
+    icon: CalendarCheck,
+    title: "Reservas online",
+    description: "Sistema de reservas propio integrado en tu web y Google. Sin comisiones por cubierto, sin intermediarios.",
   },
   {
-    icon: Truck,
-    title: "Recepción de albaranes",
-    description: "Recepción de mercancía y albaranes. Control de cantidades y precios.",
+    icon: Users,
+    title: "CRM de clientes",
+    description: "Historial de visitas, preferencias y alergias de cada cliente. Conoce a tus mejores clientes y personaliza la experiencia.",
   },
   {
-    icon: Package,
-    title: "Inventario express",
-    description: "Inventarios rápidos por categorías. Sincronización con GastroManager si lo usas.",
+    icon: Heart,
+    title: "Fidelización y comunicación",
+    description: "Campañas automáticas por email y WhatsApp. Felicitaciones de cumpleaños, recordatorios y ofertas para clientes recurrentes.",
   },
   {
     icon: MessageCircle,
-    title: "IA WhatsApp / Instagram",
-    description: "Respuestas automáticas y gestión de consultas con IA integrada.",
+    title: "IA para WhatsApp e Instagram",
+    description: "Respuestas automáticas inteligentes a consultas de reservas, carta y horarios. Disponible 24h sin esfuerzo manual.",
+  },
+  {
+    icon: Star,
+    title: "Gestión de reseñas",
+    description: "Monitoriza y responde reseñas de Google y TripAdvisor desde un único panel. Mejora tu reputación online de forma consistente.",
+  },
+  {
+    icon: QrCode,
+    title: "Menú QR interactivo",
+    description: "Carta digital siempre actualizada con fotos, alérgenos y precios. Actualizable en tiempo real sin impresiones.",
   },
 ];
 
@@ -38,10 +48,16 @@ export default function MesaPage() {
     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
       <section className="text-center mb-20">
         <h1 className="font-heading text-4xl font-bold text-[var(--text-primary)] sm:text-5xl">
-          Mesa
+          MESA
         </h1>
+        <p className="mt-4 text-sm font-medium uppercase tracking-widest text-[var(--accent)]">
+          Plataforma de crecimiento para restaurantes
+        </p>
         <p className="mt-6 max-w-2xl mx-auto text-lg text-[var(--text-secondary)]">
-          Operaciones del día a día: pedidos, recepción e inventario. Pensado para ser rápido y sencillo.
+          MESA gestiona la relación con tus clientes — reservas, fidelización, reputación y comunicación. Más ocupación, más recurrencia, más margen.
+        </p>
+        <p className="mt-3 max-w-xl mx-auto text-sm text-[var(--text-muted)]">
+          Para el control interno de cocina y costes, consulta <a href="/apps/gastromanager" className="text-[var(--accent)] hover:underline">GastroManager</a>.
         </p>
         <div className="mt-10">
           <Button href="/demo" size="lg">
@@ -50,7 +66,7 @@ export default function MesaPage() {
         </div>
       </section>
 
-      <section className="grid gap-6 sm:grid-cols-2">
+      <section className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {features.map((f) => (
           <Card key={f.title} glow>
             <f.icon className="h-10 w-10 text-[var(--accent)]" />

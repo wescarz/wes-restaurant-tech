@@ -11,7 +11,7 @@ interface SEOProps {
 
 export function createMetadata({ title, description, path = "", image }: SEOProps): Metadata {
   const url = `${SITE_URL}${path || ""}`;
-  const ogImage = image ? `${SITE_URL}${image}` : `${SITE_URL}/og.png`;
+  const ogImage = image ? `${SITE_URL}${image}` : `${SITE_URL}/whet-logo.png`;
 
   return {
     title: title.includes("|") ? title : `${title} | Whet Studio`,

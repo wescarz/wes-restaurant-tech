@@ -7,16 +7,14 @@ export const stripe = secretKey
   : (null as unknown as Stripe);
 
 export const PLANS = {
-  starter: {
-    monthly: process.env.STRIPE_PRICE_STARTER_MONTHLY ?? "price_starter_monthly",
-    yearly: process.env.STRIPE_PRICE_STARTER_YEARLY ?? "price_starter_yearly",
+  pase: {
+    monthly: process.env.STRIPE_PRICE_PASE_MONTHLY ?? "price_pase_monthly",
+    yearly: process.env.STRIPE_PRICE_PASE_YEARLY ?? "price_pase_yearly",
   },
-  professional: {
-    monthly: process.env.STRIPE_PRICE_PRO_MONTHLY ?? "price_pro_monthly",
-    yearly: process.env.STRIPE_PRICE_PRO_YEARLY ?? "price_pro_yearly",
-  },
-  enterprise: {
-    monthly: process.env.STRIPE_PRICE_ENTERPRISE_MONTHLY ?? "price_enterprise_monthly",
-    yearly: process.env.STRIPE_PRICE_ENTERPRISE_YEARLY ?? "price_enterprise_yearly",
+  "control-pase": {
+    monthly: process.env.STRIPE_PRICE_CONTROL_PASE_MONTHLY ?? "price_control_pase_monthly",
+    yearly: process.env.STRIPE_PRICE_CONTROL_PASE_YEARLY ?? "price_control_pase_yearly",
   },
 } as const;
+
+export type PlanId = keyof typeof PLANS;

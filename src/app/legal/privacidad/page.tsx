@@ -2,7 +2,7 @@ import { createMetadata } from "@/components/shared/SEO";
 
 export const metadata = createMetadata({
   title: "Política de Privacidad",
-  description: "Política de privacidad y protección de datos de Wes Restaurant Tech.",
+  description: "Política de privacidad y protección de datos de Whet Studio.",
   path: "/legal/privacidad",
 });
 
@@ -17,13 +17,13 @@ export default function PrivacidadPage() {
       </p>
       <div className="mt-12 prose prose-invert max-w-none">
         <p className="text-[var(--text-secondary)]">
-          Wes Restaurant Tech (&quot;nosotros&quot;, &quot;nuestro&quot;) recoge y trata la información que nos facilitas al usar esta web y nuestros servicios (formularios de contacto, suscripciones, uso de GastroManager y Mesa) con el fin de atender tu solicitud, gestionar la relación comercial y enviarte comunicaciones relacionadas con nuestros productos y servicios si nos has dado tu consentimiento.
+          Whet Studio (&quot;nosotros&quot;, &quot;nuestro&quot;) recoge y trata la información que nos facilitas al usar esta web y nuestros servicios (formularios de contacto, suscripciones, uso de GastroManager y Mesa) con el fin de atender tu solicitud, gestionar la relación comercial y enviarte comunicaciones relacionadas con nuestros productos y servicios si nos has dado tu consentimiento.
         </p>
         <p className="mt-4 text-[var(--text-secondary)]">
           Los datos se conservan mientras sea necesario para la finalidad indicada y para cumplir obligaciones legales. Puedes ejercer tus derechos de acceso, rectificación, supresión, limitación y portabilidad escribiendo a wes@whet.es. Si consideras que el tratamiento no se ajusta a la normativa, puedes presentar una reclamación ante la autoridad de control (AEPD).
         </p>
         <p className="mt-4 text-[var(--text-secondary)]">
-          Utilizamos proveedores como Vercel (hosting), Stripe (pagos) y Resend (emails), que pueden procesar datos en nombre de Wes Restaurant Tech bajo acuerdos de encargado del tratamiento. No vendemos tus datos a terceros.
+          Utilizamos proveedores como Vercel (hosting), Stripe (pagos) y Resend (emails), que pueden procesar datos en nombre de Whet Studio bajo acuerdos de encargado del tratamiento. No vendemos tus datos a terceros.
         </p>
       </div>
     </div>

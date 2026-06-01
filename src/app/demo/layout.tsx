@@ -1,8 +1,8 @@
 import { createMetadata } from "@/components/shared/SEO";
 
 export const metadata = createMetadata({
-  title: "Solicitar Demo",
-  description: "Solicita una demo gratuita de GastroManager o Mesa. Wes Restaurant Tech.",
+  title: "Solicitar demo de GastroManager o MESA",
+  description: "Solicita una demo gratuita de GastroManager o MESA. Software de escandallos, food cost, reservas y CRM para restaurantes. Whet Studio.",
   path: "/demo",
 });
 

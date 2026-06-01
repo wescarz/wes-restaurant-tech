@@ -2,7 +2,7 @@ import { createMetadata } from "@/components/shared/SEO";
 
 export const metadata = createMetadata({
   title: "Términos y Condiciones",
-  description: "Términos y condiciones de uso de Wes Restaurant Tech.",
+  description: "Términos y condiciones de uso de Whet Studio.",
   path: "/legal/terminos",
 });
 
@@ -17,7 +17,7 @@ export default function TerminosPage() {
       </p>
       <div className="mt-12 prose prose-invert max-w-none">
         <p className="text-[var(--text-secondary)]">
-          Al acceder y utilizar la web y los servicios de Wes Restaurant Tech (GastroManager, Mesa, consultoría y desarrollo) aceptas estos términos. El uso del sitio y de los productos está sujeto a la legislación española.
+          Al acceder y utilizar la web y los servicios de Whet Studio (GastroManager, Mesa, consultoría y desarrollo) aceptas estos términos. El uso del sitio y de los productos está sujeto a la legislación española.
         </p>
         <p className="mt-4 text-[var(--text-secondary)]">
           Las suscripciones a GastroManager se facturan mediante Stripe según el plan elegido (mensual o anual). El usuario es responsable de mantener la confidencialidad de su cuenta y de todas las actividades que se realicen con ella. Nos reservamos el derecho de suspender o dar de baja cuentas que incumplan estos términos o un uso abusivo del servicio.

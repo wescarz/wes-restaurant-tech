@@ -7,12 +7,23 @@ export function IntroSplash() {
   const [done, setDone] = useState(false);
 
   useEffect(() => {
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const alreadyShown = sessionStorage.getItem("whet-splash") === "1";
+
+    if (reduced || alreadyShown) {
+      setDone(true);
+      return;
+    }
+
+    sessionStorage.setItem("whet-splash", "1");
     document.body.style.overflow = "hidden";
-    const hideTimer = setTimeout(() => setHiding(true), 4000);
+
+    const hideTimer = setTimeout(() => setHiding(true), 900);
     const doneTimer = setTimeout(() => {
       setDone(true);
       document.body.style.overflow = "";
-    }, 5000);
+    }, 1400);
+
     return () => {
       clearTimeout(hideTimer);
       clearTimeout(doneTimer);
@@ -35,10 +46,9 @@ export function IntroSplash() {
         background: "#0A0908",
         pointerEvents: "none",
         opacity: hiding ? 0 : 1,
-        transition: hiding ? "opacity 0.9s ease" : undefined,
+        transition: hiding ? "opacity 0.4s ease" : undefined,
       }}
     >
-      {/* Logo — visible desde el primer frame */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/whet-logo.png"
@@ -46,7 +56,6 @@ export function IntroSplash() {
         style={{ width: "min(420px, 72vw)", height: "auto" }}
       />
 
-      {/* Tagline */}
       <p
         style={{
           fontFamily: "var(--font-dm-sans)",
@@ -56,13 +65,12 @@ export function IntroSplash() {
           color: "#6A605A",
           marginTop: 8,
           opacity: 0,
-          animation: "introTaglineIn 1s cubic-bezier(.22,1,.36,1) 1s forwards",
+          animation: "introTaglineIn 0.6s cubic-bezier(.22,1,.36,1) 0.3s forwards",
         }}
       >
         Afilamos restaurantes
       </p>
 
-      {/* Línea roja inferior */}
       <div
         style={{
           position: "absolute",
@@ -73,7 +81,7 @@ export function IntroSplash() {
           transformOrigin: "left",
           transform: "scaleX(0)",
           background: "linear-gradient(90deg, #C4150A, #D4571A 60%, transparent)",
-          animation: "introLineGrow 2s cubic-bezier(.22,1,.36,1) 0.3s forwards",
+          animation: "introLineGrow 1s cubic-bezier(.22,1,.36,1) 0.1s forwards",
         }}
       />
     </div>

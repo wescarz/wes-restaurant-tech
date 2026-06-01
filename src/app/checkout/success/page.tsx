@@ -5,7 +5,7 @@ import { createMetadata } from "@/components/shared/SEO";
 
 export const metadata = createMetadata({
   title: "Pago realizado",
-  description: "Gracias por tu suscripción a Wes Restaurant Tech.",
+  description: "Gracias por tu suscripción a Whet Studio.",
   path: "/checkout/success",
 });
 
@@ -17,7 +17,7 @@ export default function CheckoutSuccessPage() {
         ¡Pago realizado!
       </h1>
       <p className="mt-4 text-[var(--text-secondary)]">
-        Gracias por confiar en Wes Restaurant Tech. Te hemos enviado un email de confirmación con los próximos pasos.
+        Gracias por confiar en Whet Studio. Te hemos enviado un email de confirmación con los próximos pasos.
       </p>
       <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
         <Button href="/apps">Ver nuestras apps</Button>

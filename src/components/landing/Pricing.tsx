@@ -22,8 +22,8 @@ const plans = [
       "30 usos IA/mes",
       "Compra +30 usos IA por 5€",
     ],
-    cta: "Suscribirse — 19€/mes",
-    ctaYearly: "Suscribirse — 16€/mes",
+    cta: "Solicitar acceso",
+    ctaYearly: "Solicitar acceso",
     popular: false,
   },
   {
@@ -42,8 +42,8 @@ const plans = [
       "Informes avanzados (P&L, Food Cost)",
       "IA ilimitada",
     ],
-    cta: "Suscribirse — 49€/mes",
-    ctaYearly: "Suscribirse — 41€/mes",
+    cta: "Solicitar acceso",
+    ctaYearly: "Solicitar acceso",
     popular: true,
   },
 ];
@@ -51,19 +51,6 @@ const plans = [
 export function Pricing() {
   const [yearly, setYearly] = useState(false);
 
-  async function handleCheckout(planId: string) {
-    try {
-      const res = await fetch("/api/stripe/checkout", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ planId, yearly, customerEmail: "" }),
-      });
-      const data = await res.json();
-      if (data.url) window.location.href = data.url;
-    } catch (e) {
-      console.error(e);
-    }
-  }
 
   return (
     <section className="py-24 bg-[var(--bg-secondary)]" id="precios">
@@ -140,9 +127,9 @@ export function Pricing() {
                   <Button
                     variant={plan.popular ? "primary" : "outline"}
                     className="w-full"
-                    onClick={() => handleCheckout(plan.id)}
+                    href="/demo"
                   >
-                    {yearly ? plan.ctaYearly : plan.cta}
+                    Solicitar acceso
                   </Button>
                 </div>
               </div>
