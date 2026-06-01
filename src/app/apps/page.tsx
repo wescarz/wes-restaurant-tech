@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/Button";
 import { createMetadata } from "@/components/shared/SEO";
 
 export const metadata = createMetadata({
-  title: "Nuestras Apps",
-  description: "GastroManager y Mesa: software de gestión y operaciones para restaurantes.",
+  title: "Tecnología para restaurantes — GastroManager y MESA",
+  description: "GastroManager: software de escandallos, food cost y gestión de cocina. MESA: reservas, CRM y fidelización. Tecnología propia para restaurantes.",
   path: "/apps",
 });
 

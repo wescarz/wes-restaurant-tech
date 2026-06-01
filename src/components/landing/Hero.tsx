@@ -4,16 +4,16 @@ import { AnimatedSection } from "@/components/ui/AnimatedSection";
 
 const pillars = [
   {
-    title: "Concepto y oferta gastronómica",
-    desc: "Propuestas personalizadas, creativas y diseñadas para ser rentables desde el inicio.",
+    title: "Apertura de restaurantes",
+    desc: "Concepto, carta, procesos y equipo listos antes del primer servicio.",
   },
   {
-    title: "Rentabilidad y márgenes",
-    desc: "Más beneficio por cada plato, sin subir precios ni bajar calidad.",
+    title: "Escandallos y food cost",
+    desc: "Control de costes real, por plato. Sin sorpresas al cierre del mes.",
   },
   {
-    title: "Procesos y estructura de equipo",
-    desc: "Operación que funciona sin depender de ti en cada decisión.",
+    title: "Operaciones y formación",
+    desc: "Protocolos y equipo que funciona aunque tú no estés.",
   },
   {
     title: "Tecnología propia",
@@ -38,45 +38,46 @@ export function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-0 pt-10 pb-10 lg:pt-20 lg:pb-[72px]">
 
           {/* Left */}
-          <div style={{ borderRight: "0px" }}>
+          <div>
             <AnimatedSection>
               <p style={{ fontSize: 11, letterSpacing: ".15em", textTransform: "uppercase", color: "#D4571A", fontWeight: 500, marginBottom: 28, fontFamily: "var(--font-dm-sans)" }}>
-                whet studio · Consultoría gastronómica y tecnología
+                whet studio · Consultoría gastronómica · Barcelona
               </p>
             </AnimatedSection>
 
             <AnimatedSection delay={0.05}>
-              <h1 style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(44px, 6.5vw, 92px)", fontWeight: 600, lineHeight: 1.02, letterSpacing: "-.025em", color: "#1A1614", maxWidth: 820 }}>
-                A<span style={{ display: "inline-block" }}>fi</span>lamos<br />
-                <em style={{ fontStyle: "italic", color: "#C4150A" }}>restaurantes.</em>
+              <h1 style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(34px, 5vw, 72px)", fontWeight: 600, lineHeight: 1.06, letterSpacing: "-.02em", color: "#1A1614", maxWidth: 820 }}>
+                Consultoría gastronómica<br />
+                y operativa para<br />
+                restaurantes <em style={{ fontStyle: "italic", color: "#C4150A" }}>en Barcelona</em>
               </h1>
             </AnimatedSection>
 
             <AnimatedSection delay={0.1}>
               <p style={{ fontSize: "clamp(16px, 2vw, 18px)", color: "#6B5B4E", lineHeight: 1.72, marginTop: 24, maxWidth: 560, fontFamily: "var(--font-dm-sans)", fontWeight: 300 }}>
-                Consultoría operativa y tecnología propia para restaurantes que quieren funcionar mejor — con más control, mejores márgenes y menos dependencia de las personas clave.
+                Ayudamos a restaurantes en apertura o con problemas de rentabilidad a crear una carta más rentable, ordenar la operación, formar al equipo y controlar costes con tecnología propia.
               </p>
             </AnimatedSection>
 
             <AnimatedSection delay={0.15}>
               <div className="flex flex-wrap gap-3 mt-8 lg:mt-10">
                 <a
-                  href="#servicios"
-                  onClick={(e) => { e.preventDefault(); document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" }); }}
-                  style={{ display: "inline-flex", alignItems: "center", padding: "16px 28px", borderRadius: 4, fontSize: 14, fontWeight: 500, background: "#1A1614", color: "#FAF8F4", textDecoration: "none", transition: "opacity .2s", fontFamily: "var(--font-dm-sans)" }}
+                  href="#contacto"
+                  onClick={(e) => { e.preventDefault(); document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" }); }}
+                  style={{ display: "inline-flex", alignItems: "center", padding: "16px 28px", borderRadius: 4, fontSize: 14, fontWeight: 500, background: "#C4150A", color: "#FAF8F4", textDecoration: "none", transition: "opacity .2s", fontFamily: "var(--font-dm-sans)" }}
                   onMouseEnter={(e) => (e.currentTarget.style.opacity = ".85")}
                   onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
                 >
-                  Ver qué hacemos
+                  Solicitar diagnóstico gratuito
                 </a>
                 <a
-                  href="#contacto"
-                  onClick={(e) => { e.preventDefault(); document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" }); }}
-                  style={{ display: "inline-flex", alignItems: "center", padding: "14px 32px", borderRadius: 4, fontSize: 14, fontWeight: 500, background: "transparent", color: "#1A1614", border: "1.5px solid #C0B8AC", textDecoration: "none", transition: "border-color .2s", fontFamily: "var(--font-dm-sans)" }}
+                  href="#servicios"
+                  onClick={(e) => { e.preventDefault(); document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" }); }}
+                  style={{ display: "inline-flex", alignItems: "center", padding: "14px 28px", borderRadius: 4, fontSize: 14, fontWeight: 500, background: "transparent", color: "#1A1614", border: "1.5px solid #C0B8AC", textDecoration: "none", transition: "border-color .2s", fontFamily: "var(--font-dm-sans)" }}
                   onMouseEnter={(e) => (e.currentTarget.style.borderColor = "#1A1614")}
                   onMouseLeave={(e) => (e.currentTarget.style.borderColor = "#C0B8AC")}
                 >
-                  Hablar con nosotros
+                  Ver servicios
                 </a>
               </div>
             </AnimatedSection>
@@ -109,7 +110,7 @@ export function Hero() {
           >
             {[
               { value: "Apertura", label: "Desde cero hasta primer servicio" },
-              { value: "Consultoría", label: "Operativa, cartas y procesos" },
+              { value: "Food cost", label: "Escandallos y control de márgenes" },
               { value: "Tecnología", label: "GastroManager y MESA" },
               { value: "24h", label: "Tiempo de respuesta" },
             ].map((item) => (

@@ -2,9 +2,9 @@ import { Pricing } from "@/components/landing/Pricing";
 import { createMetadata } from "@/components/shared/SEO";
 
 export const metadata = createMetadata({
-  title: "Precios GastroManager — Pase y Control + Pase",
+  title: "Precios — GastroManager para restaurantes",
   description:
-    "Planes Pase (19€/mes) y Control + Pase (49€/mes) para GastroManager. Sin límites de recetas ni productos.",
+    "Planes desde 19€/mes para GastroManager: escandallos, food cost, recetario y control de costes sin límites. Prueba 14 días gratis.",
   path: "/precios",
 });
 

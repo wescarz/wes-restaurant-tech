@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/Button";
 import { createMetadata } from "@/components/shared/SEO";
 
 export const metadata = createMetadata({
-  title: "Mesa — Operaciones diarias para restaurantes",
+  title: "MESA — Reservas, CRM y fidelización para restaurantes",
   description:
-    "Pedidos rápidos, recepción de albaranes, inventario express e IA para WhatsApp e Instagram.",
+    "Plataforma de reservas, CRM de clientes y fidelización para restaurantes. Gestión de reputación online, menús QR y comunicación automática. Más ocupación, más recurrencia.",
   path: "/apps/mesa",
 });
 

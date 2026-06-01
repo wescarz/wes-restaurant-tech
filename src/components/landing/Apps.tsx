@@ -5,27 +5,29 @@ import { AnimatedSection } from "@/components/ui/AnimatedSection";
 
 const apps = [
   {
-    category: "Control interno · Operaciones",
+    category: "Para dirección y cocina",
+    badge: "Control interno · Costes y operaciones",
     name: "GastroManager",
-    tagline: "El control operativo que un restaurante necesita para tomar buenas decisiones.",
-    desc: "Sistema de gestión para cocina, operaciones y dirección. Recetas, costes, márgenes y procesos en un solo lugar. Con IA para apoyar la toma de decisiones sin añadir trabajo.",
+    tagline: "Controla lo que cuesta. Sabe lo que ganas.",
+    desc: "Sistema de gestión para cocina y dirección. Recetario digital, escandallos, food cost y márgenes en tiempo real. Con IA para apoyar la toma de decisiones sin añadir trabajo burocrático.",
     benefits: [
-      { title: "Control de costes en tiempo real", text: "Escandallos, food cost y márgenes actualizados. Sabes exactamente qué cuesta cada plato y dónde se pierden los márgenes." },
-      { title: "Recetario digital vivo", text: "Recetas, subrecetas, mermas y alérgenos en un solo sistema. Fichas técnicas exportables en PDF para cocina y auditorías." },
-      { title: "IA para análisis operativo", text: "Detecta desviaciones, automatiza tareas y digitaliza documentos. Información útil para decidir, no para reportar." },
+      { title: "Escandallos y food cost en tiempo real", text: "Recetas, subrecetas, mermas y alérgenos vinculados a costes reales. Sabes exactamente qué cuesta cada plato y dónde se pierden los márgenes." },
+      { title: "Recetario digital vivo", text: "Fichas técnicas exportables en PDF para cocina y auditorías. Subrecetas, porciones y mermas actualizadas automáticamente con el precio de los proveedores." },
+      { title: "IA para análisis operativo", text: "Detecta desviaciones, automatiza tareas repetitivas y digitaliza documentos. Datos útiles para decidir, no para reportar." },
     ],
     href: "/apps/gastromanager",
     cta: "Ver GastroManager →",
   },
   {
-    category: "Crecimiento · Experiencia de cliente",
+    category: "Para la relación con el cliente",
+    badge: "Crecimiento · Reservas y fidelización",
     name: "MESA",
-    tagline: "Para atraer, convertir, fidelizar y crecer con criterio comercial.",
-    desc: "Plataforma de crecimiento y automatización comercial. Reservas, CRM, fidelización, reputación y experiencia digital del cliente, todo con enfoque práctico para restauración.",
+    tagline: "Más clientes, más recurrencia, más ocupación.",
+    desc: "Plataforma de crecimiento y gestión comercial. Reservas, CRM de clientes, fidelización, reputación y experiencia digital — todo con enfoque práctico para la restauración.",
     benefits: [
-      { title: "Reservas y CRM integrados", text: "Centraliza reservas, segmenta clientes y automatiza campañas. El restaurante conoce a su cliente y actúa sobre esa información." },
-      { title: "Reputación y fidelización", text: "Gestiona reseñas, activa programas de fidelización y mejora la experiencia digital con menús QR y comunicación omnicanal." },
-      { title: "Más ocupación, más recurrencia", text: "Herramientas para mejorar el ticket medio, aumentar la recurrencia y ocupar más mesas con menos esfuerzo manual." },
+      { title: "Reservas y CRM de clientes integrados", text: "Centraliza reservas, conoce a tus clientes y actúa sobre esa información. El restaurante sabe quién viene, cuándo y qué pide." },
+      { title: "Reputación y fidelización", text: "Gestión de reseñas online, programas de fidelización y menús QR. Comunicación con el cliente de forma automatizada y efectiva." },
+      { title: "Más ocupación y recurrencia", text: "Herramientas para mejorar el ticket medio, aumentar la frecuencia de visita y ocupar más mesas con menos esfuerzo manual." },
     ],
     href: "/apps/mesa",
     cta: "Ver MESA →",
@@ -42,27 +44,34 @@ export function Apps() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-20 pb-10 lg:pb-16" style={{ borderBottom: "1px solid #D8CFC0" }}>
             <div>
               <p style={{ fontSize: 11, letterSpacing: ".14em", textTransform: "uppercase", color: "#D4571A", fontWeight: 500, marginBottom: 20, fontFamily: "var(--font-dm-sans)" }}>
-                Herramientas propias
+                Tecnología propia para restaurantes
               </p>
               <h2 style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(28px, 3.5vw, 48px)", fontWeight: 600, lineHeight: 1.12, color: "#1A1614" }}>
-                Tecnología creada<br />desde <em style={{ fontStyle: "italic", color: "#C4150A" }}>dentro del sector</em>
+                Dos herramientas.<br />Un problema <em style={{ fontStyle: "italic", color: "#C4150A" }}>resuelto.</em>
               </h2>
             </div>
             <div style={{ fontSize: 16, color: "#6B5B4E", lineHeight: 1.75, fontFamily: "var(--font-dm-sans)" }}>
-              Cada función resuelve algo concreto. No son productos de startup diseñados desde fuera — nacen de detectar los mismos problemas una y otra vez en restaurantes reales.
+              <strong style={{ display: "block", color: "#1A1614", marginBottom: 8, fontFamily: "var(--font-dm-sans)", fontSize: 15 }}>GastroManager</strong> es para el interior del negocio: lo que cuesta, lo que produce y cómo se gestiona la cocina.
+              <br /><br />
+              <strong style={{ display: "block", color: "#1A1614", marginBottom: 8, fontFamily: "var(--font-dm-sans)", fontSize: 15 }}>MESA</strong> es para el exterior: los clientes, las reservas, la fidelización y el crecimiento.
+              <br /><br />
+              Se pueden usar por separado o juntas.
             </div>
           </div>
         </AnimatedSection>
 
-        {/* App columns — border manual para evitar que divide-x estire el grid */}
+        {/* App columns */}
         <div className="grid grid-cols-1 lg:grid-cols-2 lg:items-start divide-y lg:divide-y-0 divide-[#D8CFC0]">
           {apps.map((app, i) => (
             <AnimatedSection key={app.name} delay={i * 0.1}>
               <div className={`py-10 lg:py-16 ${i === 0 ? "lg:pr-14 lg:border-r border-[#D8CFC0]" : "lg:pl-14"}`}>
-                <div style={{ fontSize: 10, letterSpacing: ".15em", textTransform: "uppercase", color: "#B0A090", marginBottom: 20, fontFamily: "var(--font-dm-sans)" }}>
+                <div style={{ fontSize: 10, letterSpacing: ".15em", textTransform: "uppercase", color: "#B0A090", marginBottom: 6, fontFamily: "var(--font-dm-sans)" }}>
                   {app.category}
                 </div>
-                <div style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(32px, 3vw, 44px)", fontWeight: 700, color: "#1A1614", letterSpacing: "-.02em", lineHeight: 1, marginBottom: 16 }}>
+                <div style={{ fontSize: 10, letterSpacing: ".12em", textTransform: "uppercase", color: "#C4150A", marginBottom: 16, fontFamily: "var(--font-dm-sans)", fontWeight: 500 }}>
+                  {app.badge}
+                </div>
+                <div style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(32px, 3vw, 44px)", fontWeight: 700, color: "#1A1614", letterSpacing: "-.02em", lineHeight: 1, marginBottom: 12 }}>
                   {app.name}
                 </div>
                 <div style={{ fontFamily: "var(--font-playfair)", fontSize: 17, fontStyle: "italic", color: "#6B5B4E", lineHeight: 1.5, marginBottom: 16 }}>

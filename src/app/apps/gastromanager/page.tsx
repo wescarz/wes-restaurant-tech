@@ -13,9 +13,9 @@ import { Button } from "@/components/ui/Button";
 import { createMetadata } from "@/components/shared/SEO";
 
 export const metadata = createMetadata({
-  title: "GastroManager — Gestión integral para restaurantes",
+  title: "GastroManager — Escandallos, food cost y control de costes para restaurantes",
   description:
-    "Recetario, costes, HACCP, producción, dispensa, informes y auditor IA. Todo en una sola app.",
+    "Software de escandallos y food cost para restaurantes. Recetario digital, control de costes por plato, HACCP, producción y auditor IA. Controla lo que cuesta tu cocina.",
   path: "/apps/gastromanager",
 });
 

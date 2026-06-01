@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://wesrestauranttech.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://whet.es";
 
 interface SEOProps {
   title: string;
@@ -14,13 +14,13 @@ export function createMetadata({ title, description, path = "", image }: SEOProp
   const ogImage = image ? `${SITE_URL}${image}` : `${SITE_URL}/og.png`;
 
   return {
-    title: title.includes("|") ? title : `${title} | Wes Restaurant Tech`,
+    title: title.includes("|") ? title : `${title} | Whet Studio`,
     description,
     openGraph: {
       title,
       description,
       url,
-      siteName: "Wes Restaurant Tech",
+      siteName: "Whet Studio",
       images: [{ url: ogImage, width: 1200, height: 630 }],
       locale: "es_ES",
       type: "website",

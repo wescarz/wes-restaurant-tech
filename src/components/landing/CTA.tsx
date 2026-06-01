@@ -69,23 +69,24 @@ export function CTA() {
             <div className="flex flex-col gap-4 lg:justify-center">
               <a
                 href="mailto:wes@whet.es"
-                style={{ padding: "18px 32px", background: "#1A1614", color: "#FAF8F4", borderRadius: 4, fontSize: 15, fontWeight: 500, textDecoration: "none", textAlign: "center", transition: "opacity .2s", display: "block", fontFamily: "var(--font-dm-sans)" }}
+                style={{ padding: "18px 32px", background: "#C4150A", color: "#FAF8F4", borderRadius: 4, fontSize: 15, fontWeight: 500, textDecoration: "none", textAlign: "center", transition: "opacity .2s", display: "block", fontFamily: "var(--font-dm-sans)" }}
                 onMouseEnter={(e) => (e.currentTarget.style.opacity = ".85")}
                 onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
               >
-                Escribir a whet studio
+                Solicitar diagnóstico gratuito
               </a>
               <a
-                href="#apps"
-                onClick={(e) => { e.preventDefault(); document.getElementById("apps")?.scrollIntoView({ behavior: "smooth" }); }}
-                style={{ padding: "16px 28px", background: "transparent", color: "#6B5B4E", border: "1.5px solid #D8CFC0", borderRadius: 4, fontSize: 14, textDecoration: "none", textAlign: "center", display: "block", transition: "all .2s", fontFamily: "var(--font-dm-sans)" }}
+                href="https://wa.me/34612345678"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ padding: "16px 28px", background: "transparent", color: "#1A1614", border: "1.5px solid #D8CFC0", borderRadius: 4, fontSize: 14, textDecoration: "none", textAlign: "center", display: "block", transition: "all .2s", fontFamily: "var(--font-dm-sans)" }}
                 onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#1A1614"; e.currentTarget.style.color = "#1A1614"; }}
-                onMouseLeave={(e) => { e.currentTarget.style.borderColor = "#D8CFC0"; e.currentTarget.style.color = "#6B5B4E"; }}
+                onMouseLeave={(e) => { e.currentTarget.style.borderColor = "#D8CFC0"; e.currentTarget.style.color = "#1A1614"; }}
               >
-                Ver apps primero
+                WhatsApp directo
               </a>
               <p style={{ fontSize: 12, color: "#B0A090", textAlign: "center", fontFamily: "var(--font-dm-sans)", marginTop: 4 }}>
-                wes@whet.es
+                wes@whet.es · Respuesta en menos de 24h
               </p>
             </div>
 

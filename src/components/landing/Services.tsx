@@ -3,73 +3,59 @@ import { AnimatedSection } from "@/components/ui/AnimatedSection";
 const services = [
   {
     n: "01",
-    title: "Concepto y oferta gastronómica",
-    intro: "Diseñamos propuestas gastronómicas personalizadas y creativas — con identidad propia, coherencia interna y estructura de negocio que las hace sostenibles desde el primer día.",
+    title: "Apertura de restaurantes",
+    intro: "Desde la idea hasta el primer servicio. Diseñamos el concepto, la carta, los procesos y formamos al equipo para que el restaurante abra con todo listo — y funcione desde el día uno.",
     bullets: [
-      "Definición de concepto: qué es el restaurante, para quién y por qué es diferente",
-      "Diseño de oferta gastronómica creativa, coherente y rentable",
-      "Carta estructurada por familias con criterio de venta y margen",
-      "Identidad gastronómica: narrativa, estilo de cocina y propuesta de valor",
-      "Fichas técnicas y escandallos desde la base del diseño de carta",
-      "Adaptación a espacio, equipo y capacidad operativa real",
+      "Modelo de negocio y análisis de viabilidad antes de invertir",
+      "Concepto gastronómico con identidad clara y diferenciación real",
+      "Carta estructurada con ingeniería de menú y escandallos desde el inicio",
+      "Protocolos de cocina, mise en place y flujos de trabajo",
+      "Selección, negociación y onboarding de proveedores clave",
+      "Formación completa del equipo y acompañamiento en los primeros servicios",
     ],
-    outcome: "Un concepto con personalidad que sabe lo que es, lo que vende y por qué funciona.",
+    outcome: "Abres con control, con un equipo que sabe lo que hace y con la operación ya rodada.",
   },
   {
     n: "02",
-    title: "Rentabilidad y márgenes",
-    intro: "Analizamos la operación con datos reales para identificar dónde se pierde dinero y cómo recuperarlo — sin necesidad de subir precios ni reducir calidad.",
+    title: "Reestructuración gastronómica",
+    intro: "Para restaurantes que están abiertos pero la rentabilidad no cuadra. Analizamos la carta, el food cost y los márgenes con datos reales — y rediseñamos lo que no funciona.",
     bullets: [
-      "Auditoría de rentabilidad actual: márgenes reales por plato y por familia",
+      "Auditoría de food cost: márgenes reales por plato y por familia de productos",
       "Identificación de platos que descapitalizan el negocio sin que se note",
       "Rediseño de carta con equilibrio entre rentabilidad, concepto y venta",
-      "Implantación de control de food cost en la operación diaria",
-      "Análisis de estructura de costes fijos y variables del negocio",
-      "Protocolo de revisión mensual y alertas de desviación",
+      "Escandallos y fichas técnicas integrados en la operación real",
+      "Implantación de control de costes en el día a día del negocio",
+      "Revisión de concepto y propuesta de valor si la situación lo requiere",
     ],
     outcome: "Sabes exactamente qué ganas con cada plato. Los márgenes dejan de ser una sorpresa.",
   },
   {
     n: "03",
-    title: "Aperturas y puesta en marcha",
-    intro: "Acompañamos desde la idea hasta el primer servicio. No solo el proyecto — la operación real lista para funcionar desde el día uno, con el equipo formado y los procesos definidos.",
+    title: "Operaciones y formación",
+    intro: "Definimos cómo funciona el restaurante sin depender de una sola persona. Procesos documentados, equipo formado y estructura operativa que se mantiene en el tiempo.",
     bullets: [
-      "Modelo de negocio y análisis de viabilidad antes de invertir",
-      "Diseño de oferta gastronómica y carta con ingeniería de menú",
-      "Estructura de cocina, mise en place y flujos de trabajo",
-      "Selección, negociación y onboarding de proveedores clave",
-      "Protocolo de apertura y formación completa del equipo",
-      "Acompañamiento presencial durante los primeros servicios",
-    ],
-    outcome: "Abres con control, con un equipo que sabe lo que hace y con la operación ya rodada.",
-  },
-  {
-    n: "04",
-    title: "Procesos, equipos y estructura",
-    intro: "Definimos cómo tiene que funcionar el restaurante cuando tú no estás. El negocio deja de depender de una sola persona y empieza a funcionar como un sistema.",
-    bullets: [
-      "Mapeo de flujos actuales e identificación de cuellos de botella",
-      "Protocolos de cocina, sala y apertura/cierre documentados",
+      "Mapeo de flujos actuales e identificación de cuellos de botella operativos",
+      "Protocolos de cocina, sala y apertura/cierre documentados y usables",
+      "Manual operativo del restaurante como herramienta viva del equipo",
+      "Programas de formación a medida para cocina y sala",
       "Estructura de turnos y análisis de productividad por euro invertido",
-      "Formación del equipo y transferencia de conocimiento",
-      "Manual operativo del restaurante como herramienta viva",
       "Seguimiento de adopción durante 30 días post-implantación",
     ],
     outcome: "El restaurante funciona cuando tú no estás. Sin que todo dependa de ti.",
   },
   {
-    n: "05",
-    title: "Proveedores y formación de equipo",
-    intro: "Construimos la red de proveedores adecuada para cada negocio y formamos al equipo para que opere con autonomía — dos palancas que definen la calidad y la consistencia de un restaurante.",
+    n: "04",
+    title: "Tecnología para restaurantes",
+    intro: "GastroManager y MESA — herramientas propias creadas desde dentro del sector. No son productos de startup diseñados desde fuera: nacen de detectar los mismos problemas una y otra vez en restaurantes reales.",
     bullets: [
-      "Auditoría de proveedores actuales: calidad, precio y condiciones reales",
-      "Búsqueda, selección y negociación de proveedores estratégicos",
-      "Protocolos de recepción, control de calidad y gestión de pedidos",
-      "Programas de formación a medida para cocina y sala",
-      "Formación en producto, técnica y estándares de servicio",
-      "Evaluación continua y planes de mejora individualizados por perfil",
+      "GastroManager: recetario, escandallos, food cost y control de costes en tiempo real",
+      "MESA: reservas, CRM de clientes, fidelización y gestión de reputación",
+      "Implantación y formación del equipo incluidas en el proceso de consultoría",
+      "Sin integraciones complejas — las herramientas se adaptan al restaurante",
+      "Datos reales para tomar decisiones, no para generar más informes",
+      "Soporte continuo y evolución basada en el uso real del negocio",
     ],
-    outcome: "El equipo sabe lo que hace. Los proveedores entregan lo que necesitas, cuando lo necesitas.",
+    outcome: "El equipo tiene las herramientas que necesita. Los datos están cuando los necesitas.",
   },
 ];
 
@@ -83,16 +69,16 @@ export function Services() {
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_480px] gap-8 lg:gap-24 pb-10 lg:pb-16" style={{ borderBottom: "1px solid #D8CFC0" }}>
             <div>
               <p style={{ fontSize: 11, letterSpacing: ".14em", textTransform: "uppercase", color: "#D4571A", fontWeight: 500, marginBottom: 20, fontFamily: "var(--font-dm-sans)" }}>
-                Consultoría gastronómica
+                Consultoría gastronómica · Barcelona
               </p>
               <h2 style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(28px, 3.8vw, 52px)", fontWeight: 600, lineHeight: 1.1, color: "#1A1614" }}>
-                Concepto, rentabilidad,<br />procesos e<br />
-                <em style={{ fontStyle: "italic", color: "#C4150A" }}>implementación real.</em>
+                Apertura, food cost,<br />operaciones y<br />
+                <em style={{ fontStyle: "italic", color: "#C4150A" }}>tecnología propia.</em>
               </h2>
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 16, justifyContent: "flex-end" }}>
               <p style={{ fontSize: 16, color: "#6B5B4E", lineHeight: 1.75, fontFamily: "var(--font-dm-sans)" }}>
-                Trabajamos desde dentro del negocio — no desde una presentación. Diseñamos conceptos con personalidad, analizamos la rentabilidad real y ejecutamos cambios que el equipo adopta.
+                Trabajamos desde dentro del negocio — no desde una presentación. Diseñamos conceptos, controlamos escandallos y food cost, y ejecutamos cambios que el equipo adopta.
               </p>
               <p style={{ fontSize: 15, color: "#9A8A7A", lineHeight: 1.7, fontFamily: "var(--font-dm-sans)" }}>
                 El trabajo no termina con la entrega de un documento. Termina cuando el restaurante funciona mejor.
@@ -159,14 +145,14 @@ export function Services() {
             <div />
             <div className="flex flex-wrap items-center justify-between gap-6">
               <p style={{ fontSize: 15, color: "#6B5B4E", fontFamily: "var(--font-dm-sans)" }}>
-                Cada proyecto empieza con un diagnóstico sin compromiso.
+                Cada proyecto empieza con un diagnóstico gratuito sin compromiso.
               </p>
               <a
                 href="#contacto"
                 onClick={(e) => { e.preventDefault(); document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" }); }}
                 style={{ display: "inline-flex", alignItems: "center", gap: 8, fontSize: 14, fontWeight: 500, color: "#1A1614", fontFamily: "var(--font-dm-sans)", textDecoration: "none", borderBottom: "1.5px solid #1A1614", paddingBottom: 2 }}
               >
-                Solicitar diagnóstico →
+                Solicitar diagnóstico gratuito →
               </a>
             </div>
           </div>
