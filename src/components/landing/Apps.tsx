@@ -22,12 +22,12 @@ const apps = [
 
 export function Apps() {
   return (
-    <section id="apps" className="py-14 lg:py-20" style={{ background: "#FAF8F4", borderBottom: "1px solid #D8CFC0" }}>
+    <section id="apps" className="py-8 lg:py-12" style={{ background: "#FAF8F4", borderBottom: "1px solid #D8CFC0" }}>
       <div className="mx-auto px-6 lg:px-12" style={{ maxWidth: 1280 }}>
 
         {/* Intro */}
         <AnimatedSection>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-20 pb-10 lg:pb-16" style={{ borderBottom: "1px solid #D8CFC0" }}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-20 pb-6 lg:pb-8" style={{ borderBottom: "1px solid #D8CFC0" }}>
             <div>
               <p style={{ fontSize: 11, letterSpacing: ".14em", textTransform: "uppercase", color: "#D4571A", fontWeight: 500, marginBottom: 20, fontFamily: "var(--font-dm-sans)" }}>
                 Tecnología propia para restaurantes
@@ -48,7 +48,7 @@ export function Apps() {
         <div className="grid grid-cols-1">
           {apps.map((app, i) => (
             <AnimatedSection key={app.name} delay={i * 0.1}>
-              <div className="py-10 lg:py-16" style={{ maxWidth: 680 }}>
+              <div className="py-6 lg:py-8" style={{ maxWidth: 680 }}>
                 <div style={{ fontSize: 10, letterSpacing: ".15em", textTransform: "uppercase", color: "#B0A090", marginBottom: 6, fontFamily: "var(--font-dm-sans)" }}>
                   {app.category}
                 </div>
@@ -66,7 +66,7 @@ export function Apps() {
                 </div>
 
                 {/* Benefits */}
-                <div style={{ display: "flex", flexDirection: "column", gap: 14, marginBottom: 32, paddingTop: 24, borderTop: "1px solid #D8CFC0" }}>
+                <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 20, paddingTop: 16, borderTop: "1px solid #D8CFC0" }}>
                   {app.benefits.map((b) => (
                     <div key={b.title} style={{ display: "grid", gridTemplateColumns: "16px 1fr", gap: 12, alignItems: "flex-start" }}>
                       <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#C4150A", marginTop: 5, flexShrink: 0 }} />

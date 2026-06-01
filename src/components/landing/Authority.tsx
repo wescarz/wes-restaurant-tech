@@ -26,11 +26,11 @@ const projects = [
 
 export function Authority() {
   return (
-    <section style={{ background: "#1A1614", padding: "80px 0", borderBottom: "1px solid #2E2420" }}>
+    <section style={{ background: "#1A1614", padding: "48px 0", borderBottom: "1px solid #2E2420" }}>
       <div className="mx-auto px-6 lg:px-12" style={{ maxWidth: 1280 }}>
 
         <AnimatedSection>
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_480px] gap-8 lg:gap-24 pb-12 lg:pb-16" style={{ borderBottom: "1px solid #2E2420" }}>
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_480px] gap-8 lg:gap-24 pb-6 lg:pb-8" style={{ borderBottom: "1px solid #2E2420" }}>
             <div>
               <p style={{ fontSize: 11, letterSpacing: ".14em", textTransform: "uppercase", color: "#D4571A", fontWeight: 500, marginBottom: 20, fontFamily: "var(--font-dm-sans)" }}>
                 Proyectos reales
@@ -50,7 +50,7 @@ export function Authority() {
           {projects.map((p, i) => (
             <AnimatedSection key={i} delay={i * 0.08}>
               <div
-                className={`py-10 lg:py-12 ${i < projects.length - 1 ? "lg:border-r border-[#2E2420] lg:pr-10" : ""} ${i > 0 ? "lg:pl-10" : ""}`}
+                className={`py-6 lg:py-8 ${i < projects.length - 1 ? "lg:border-r border-[#2E2420] lg:pr-10" : ""} ${i > 0 ? "lg:pl-10" : ""}`}
                 style={{ borderTop: "1px solid #2E2420" }}
               >
                 <div style={{ display: "flex", gap: 8, marginBottom: 20 }}>
@@ -66,7 +66,7 @@ export function Authority() {
                 {/* Photo placeholder */}
                 <div style={{
                   width: "100%",
-                  height: 160,
+                  height: 100,
                   background: "#241E1A",
                   borderRadius: 2,
                   marginBottom: 20,
@@ -92,7 +92,7 @@ export function Authority() {
         </div>
 
         <AnimatedSection>
-          <div className="flex flex-wrap items-center justify-between gap-6 pt-10">
+          <div className="flex flex-wrap items-center justify-between gap-6 pt-6">
             <p style={{ fontSize: 14, color: "#6A5A4A", fontFamily: "var(--font-dm-sans)" }}>
               ¿Tienes un restaurante en Barcelona? Cuéntanos tu situación.
             </p>

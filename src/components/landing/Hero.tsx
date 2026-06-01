@@ -35,7 +35,7 @@ export function Hero() {
       <div className="mx-auto px-6 lg:px-12 w-full" style={{ maxWidth: 1280 }}>
 
         {/* Main content */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-0 pt-10 pb-10 lg:pt-20 lg:pb-[72px]">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-0 pt-6 pb-6 lg:pt-12 lg:pb-10">
 
           {/* Left */}
           <div>
@@ -105,7 +105,7 @@ export function Hero() {
         {/* Bottom proof bar */}
         <AnimatedSection delay={0.2}>
           <div
-            className="grid grid-cols-2 sm:flex sm:flex-wrap gap-4 sm:gap-8 lg:gap-16 py-6"
+            className="grid grid-cols-2 sm:flex sm:flex-wrap gap-4 sm:gap-8 lg:gap-16 py-4"
             style={{ borderTop: "1px solid #D8CFC0" }}
           >
             {[

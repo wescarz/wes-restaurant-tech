@@ -9,14 +9,14 @@ const profiles = [
 
 export function ForWho() {
   return (
-    <section id="para-quien" className="py-12 lg:py-[72px]" style={{ background: "#F2EDE4", borderBottom: "1px solid #D8CFC0" }}>
+    <section id="para-quien" className="py-8 lg:py-12" style={{ background: "#F2EDE4", borderBottom: "1px solid #D8CFC0" }}>
       <div className="mx-auto px-6 lg:px-12" style={{ maxWidth: 1280 }}>
 
         <AnimatedSection>
           <p style={{ fontSize: 11, letterSpacing: ".14em", textTransform: "uppercase", color: "#D4571A", fontWeight: 500, marginBottom: 16, fontFamily: "var(--font-dm-sans)" }}>
             Para quién es whet studio
           </p>
-          <h2 style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(26px, 3.5vw, 44px)", fontWeight: 600, lineHeight: 1.12, color: "#1A1614", marginBottom: 32 }}>
+          <h2 style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(26px, 3.5vw, 44px)", fontWeight: 600, lineHeight: 1.12, color: "#1A1614", marginBottom: 20 }}>
             No trabajamos para todos.<br />
             Trabajamos para <em style={{ fontStyle: "italic", color: "#C4150A" }}>quien lo necesita de verdad.</em>
           </h2>
@@ -26,7 +26,7 @@ export function ForWho() {
           {profiles.map((p, i) => (
             <AnimatedSection key={p.n} delay={i * 0.05}>
               <div
-                className="grid grid-cols-[48px_1fr] lg:grid-cols-[80px_1fr_1fr] gap-4 lg:gap-0 py-6"
+                className="grid grid-cols-[48px_1fr] lg:grid-cols-[80px_1fr_1fr] gap-4 lg:gap-0 py-4"
                 style={{
                   borderTop: "1px solid #D8CFC0",
                   alignItems: "flex-start",

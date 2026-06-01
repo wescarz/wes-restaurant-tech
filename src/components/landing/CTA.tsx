@@ -11,12 +11,12 @@ const steps = [
 
 export function CTA() {
   return (
-    <section id="contacto" className="pt-14 pb-12 lg:pt-24 lg:pb-20" style={{ background: "#FAF8F4" }}>
+    <section id="contacto" className="pt-10 pb-8 lg:pt-14 lg:pb-12" style={{ background: "#FAF8F4" }}>
       <div className="mx-auto px-6 lg:px-12" style={{ maxWidth: 1280 }}>
 
         {/* Process steps */}
         <AnimatedSection>
-          <div className="mb-12 lg:mb-20">
+          <div className="mb-8 lg:mb-12">
             <p style={{ fontSize: 11, letterSpacing: ".14em", textTransform: "uppercase", color: "#D4571A", fontWeight: 500, marginBottom: 16, fontFamily: "var(--font-dm-sans)" }}>
               Cómo empezamos
             </p>
@@ -37,7 +37,7 @@ export function CTA() {
 
         {/* Main CTA */}
         <AnimatedSection>
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-8 lg:gap-12 pt-10 lg:pt-14" style={{ borderTop: "3px solid #C4150A" }}>
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-8 lg:gap-12 pt-6 lg:pt-10" style={{ borderTop: "3px solid #C4150A" }}>
 
             {/* Left */}
             <div>
