@@ -6,9 +6,9 @@ const tags = [
   "Aperturas",
   "Procesos y equipo",
   "GastroManager",
-  "MESA",
   "Concepto gastronómico",
   "Ingeniería de menú",
+  "Food cost y escandallos",
 ];
 
 function Separator() {

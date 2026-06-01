@@ -17,7 +17,7 @@ const pillars = [
   },
   {
     title: "Tecnología propia",
-    desc: "GastroManager y MESA — herramientas que el equipo usa de verdad.",
+    desc: "GastroManager — herramienta que el equipo usa de verdad.",
   },
 ];
 
@@ -111,7 +111,7 @@ export function Hero() {
             {[
               { value: "Apertura", label: "Desde cero hasta primer servicio" },
               { value: "Food cost", label: "Escandallos y control de márgenes" },
-              { value: "Tecnología", label: "GastroManager y MESA" },
+              { value: "Tecnología", label: "GastroManager — software propio" },
               { value: "24h", label: "Tiempo de respuesta" },
             ].map((item) => (
               <div key={item.value} style={{ display: "flex", flexDirection: "column", gap: 2 }}>

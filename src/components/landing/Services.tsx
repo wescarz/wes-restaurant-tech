@@ -46,10 +46,10 @@ const services = [
   {
     n: "04",
     title: "Tecnología para restaurantes",
-    intro: "GastroManager y MESA — herramientas propias creadas desde dentro del sector. No son productos de startup diseñados desde fuera: nacen de detectar los mismos problemas una y otra vez en restaurantes reales.",
+    intro: "GastroManager — herramienta propia creada desde dentro del sector. No es un producto de startup diseñado desde fuera: nace de detectar los mismos problemas una y otra vez en restaurantes reales.",
     bullets: [
-      "GastroManager: recetario, escandallos, food cost y control de costes en tiempo real",
-      "MESA: reservas, CRM de clientes, fidelización y gestión de reputación",
+      "Recetario digital, escandallos, food cost y control de costes en tiempo real",
+      "HACCP, producción, stock y pedidos a proveedores en un solo sistema",
       "Implantación y formación del equipo incluidas en el proceso de consultoría",
       "Sin integraciones complejas — las herramientas se adaptan al restaurante",
       "Datos reales para tomar decisiones, no para generar más informes",
