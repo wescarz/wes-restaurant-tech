@@ -142,7 +142,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             Solicitar diagnóstico
           </a>
           <a
-            href={process.env.NEXT_PUBLIC_APP_URL ?? "https://restaurant-manager-sync-32xbzgovn-wes-projects-bd7d81b0.vercel.app/"}
+            href={process.env.NEXT_PUBLIC_APP_URL ?? "https://app.whet.es"}
             target="_blank"
             rel="noopener noreferrer"
             style={{

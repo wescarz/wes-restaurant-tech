@@ -77,7 +77,7 @@ export default function GastroManagerPage() {
             Prueba 14 días gratis
           </Button>
           <Button
-            href={process.env.NEXT_PUBLIC_APP_URL ?? "https://restaurant-manager-sync-32xbzgovn-wes-projects-bd7d81b0.vercel.app/"}
+            href={process.env.NEXT_PUBLIC_APP_URL ?? "https://app.whet.es"}
             variant="outline"
             size="lg"
             target="_blank"

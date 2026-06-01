@@ -95,7 +95,7 @@ export function Navbar() {
           {/* CTA */}
           <div className="hidden lg:flex items-center gap-3">
             <a
-              href={process.env.NEXT_PUBLIC_APP_URL ?? "https://restaurant-manager-sync-32xbzgovn-wes-projects-bd7d81b0.vercel.app/"}
+              href={process.env.NEXT_PUBLIC_APP_URL ?? "https://app.whet.es"}
               target="_blank"
               rel="noopener noreferrer"
               style={{ fontSize: 13, fontWeight: 500, padding: "9px 20px", borderRadius: 4, color: "#8A8078", textDecoration: "none", transition: "color .2s", fontFamily: "var(--font-dm-sans)" }}
