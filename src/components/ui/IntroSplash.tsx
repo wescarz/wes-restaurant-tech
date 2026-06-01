@@ -11,8 +11,8 @@ export function IntroSplash() {
     const alreadyShown = sessionStorage.getItem("whet-splash") === "1";
 
     if (reduced || alreadyShown) {
-      setDone(true);
-      return;
+      const id = setTimeout(() => setDone(true), 0);
+      return () => clearTimeout(id);
     }
 
     sessionStorage.setItem("whet-splash", "1");

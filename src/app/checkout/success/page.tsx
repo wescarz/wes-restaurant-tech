@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { createMetadata } from "@/components/shared/SEO";

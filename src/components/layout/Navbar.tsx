@@ -104,7 +104,7 @@ export function Navbar() {
             >
               Acceder
             </a>
-            <a
+            <Link
               href="/#contacto"
               onClick={(e) => handleNavClick(e, "contacto")}
               style={{ fontSize: 13, fontWeight: 500, padding: "9px 20px", border: "1.5px solid rgba(240,234,224,.25)", borderRadius: 4, color: "#F0EAE0", textDecoration: "none", transition: "all .2s", background: "transparent", fontFamily: "var(--font-dm-sans)" }}
@@ -112,7 +112,7 @@ export function Navbar() {
               onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#F0EAE0"; }}
             >
               Solicitar diagnóstico
-            </a>
+            </Link>
           </div>
 
           {/* Mobile hamburger */}

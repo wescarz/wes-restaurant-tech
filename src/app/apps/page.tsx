@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Card, CardTitle, CardDescription } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { createMetadata } from "@/components/shared/SEO";

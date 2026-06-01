@@ -122,9 +122,9 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               </a>
             )
           )}
-          <a
+          <Link
             href="/#contacto"
-            onClick={(e) => handleNavClick(e, "contacto")}
+            onClick={(e) => handleNavClick(e as React.MouseEvent<HTMLAnchorElement>, "contacto")}
             style={{
               display: "block",
               marginTop: 24,
@@ -140,7 +140,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             }}
           >
             Solicitar diagnóstico
-          </a>
+          </Link>
           <a
             href={process.env.NEXT_PUBLIC_APP_URL ?? "https://app.whet.es"}
             target="_blank"
