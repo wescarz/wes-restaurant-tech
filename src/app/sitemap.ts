@@ -14,7 +14,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/apps",
     "/apps/gastromanager",
-    "/apps/mesa",
     "/consultoria",
     "/desarrollo",
     "/precios",

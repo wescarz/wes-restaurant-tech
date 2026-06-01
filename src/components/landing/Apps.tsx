@@ -18,20 +18,6 @@ const apps = [
     href: "/apps/gastromanager",
     cta: "Ver GastroManager →",
   },
-  {
-    category: "Para la relación con el cliente",
-    badge: "Crecimiento · Reservas y fidelización",
-    name: "MESA",
-    tagline: "Más clientes, más recurrencia, más ocupación.",
-    desc: "Plataforma de crecimiento y gestión comercial. Reservas, CRM de clientes, fidelización, reputación y experiencia digital — todo con enfoque práctico para la restauración.",
-    benefits: [
-      { title: "Reservas y CRM de clientes integrados", text: "Centraliza reservas, conoce a tus clientes y actúa sobre esa información. El restaurante sabe quién viene, cuándo y qué pide." },
-      { title: "Reputación y fidelización", text: "Gestión de reseñas online, programas de fidelización y menús QR. Comunicación con el cliente de forma automatizada y efectiva." },
-      { title: "Más ocupación y recurrencia", text: "Herramientas para mejorar el ticket medio, aumentar la frecuencia de visita y ocupar más mesas con menos esfuerzo manual." },
-    ],
-    href: "/apps/mesa",
-    cta: "Ver MESA →",
-  },
 ];
 
 export function Apps() {
@@ -47,24 +33,22 @@ export function Apps() {
                 Tecnología propia para restaurantes
               </p>
               <h2 style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(28px, 3.5vw, 48px)", fontWeight: 600, lineHeight: 1.12, color: "#1A1614" }}>
-                Dos herramientas.<br />Un problema <em style={{ fontStyle: "italic", color: "#C4150A" }}>resuelto.</em>
+                Tecnología para<br />gestionar <em style={{ fontStyle: "italic", color: "#C4150A" }}>bien.</em>
               </h2>
             </div>
             <div style={{ fontSize: 16, color: "#6B5B4E", lineHeight: 1.75, fontFamily: "var(--font-dm-sans)" }}>
-              <strong style={{ display: "block", color: "#1A1614", marginBottom: 8, fontFamily: "var(--font-dm-sans)", fontSize: 15 }}>GastroManager</strong> es para el interior del negocio: lo que cuesta, lo que produce y cómo se gestiona la cocina.
+              <strong style={{ display: "block", color: "#1A1614", marginBottom: 8, fontFamily: "var(--font-dm-sans)", fontSize: 15 }}>GastroManager</strong> gestiona el interior del negocio: lo que cuesta, lo que produce y cómo se gestiona la cocina.
               <br /><br />
-              <strong style={{ display: "block", color: "#1A1614", marginBottom: 8, fontFamily: "var(--font-dm-sans)", fontSize: 15 }}>MESA</strong> es para el exterior: los clientes, las reservas, la fidelización y el crecimiento.
-              <br /><br />
-              Se pueden usar por separado o juntas.
+              Recetario digital, escandallos, food cost, HACCP, producción y control de márgenes — todo en una plataforma pensada para la realidad de un restaurante.
             </div>
           </div>
         </AnimatedSection>
 
         {/* App columns */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 lg:items-start divide-y lg:divide-y-0 divide-[#D8CFC0]">
+        <div className="grid grid-cols-1">
           {apps.map((app, i) => (
             <AnimatedSection key={app.name} delay={i * 0.1}>
-              <div className={`py-10 lg:py-16 ${i === 0 ? "lg:pr-14 lg:border-r border-[#D8CFC0]" : "lg:pl-14"}`}>
+              <div className="py-10 lg:py-16" style={{ maxWidth: 680 }}>
                 <div style={{ fontSize: 10, letterSpacing: ".15em", textTransform: "uppercase", color: "#B0A090", marginBottom: 6, fontFamily: "var(--font-dm-sans)" }}>
                   {app.category}
                 </div>

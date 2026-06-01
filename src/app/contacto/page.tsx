@@ -48,7 +48,7 @@ export default function ContactoPage() {
                   "Análisis de food cost y escandallos",
                   "Reestructuración gastronómica y de carta",
                   "Formación de equipo de cocina y sala",
-                  "Demo de GastroManager o MESA",
+                  "Demo de GastroManager",
                   "Consulta sobre operaciones y procesos",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2">

@@ -15,11 +15,6 @@ const apps = [
     title: "GastroManager",
     description: "Gestión integral de tu restaurante: recetario, costes, HACCP, producción, dispensa, informes y más.",
   },
-  {
-    slug: "mesa",
-    title: "MESA",
-    description: "Crecimiento y relación con el cliente: reservas online, CRM, fidelización, gestión de reseñas, menú QR e IA para WhatsApp e Instagram.",
-  },
 ];
 
 export default function AppsPage() {

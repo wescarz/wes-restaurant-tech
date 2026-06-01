@@ -69,8 +69,6 @@ export default function DemoPage() {
                 className="w-full rounded-lg border border-[var(--border)] bg-[var(--bg-secondary)] px-4 py-3 text-[var(--text-primary)]"
               >
                 <option value="gastromanager">GastroManager</option>
-                <option value="mesa">Mesa</option>
-                <option value="ambas">Ambas</option>
               </select>
             </div>
           </div>
