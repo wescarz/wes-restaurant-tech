@@ -1,11 +1,12 @@
 "use client";
 
+import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { X } from "lucide-react";
 
 const links = [
   { id: "servicios", label: "Consultoría" },
-  { id: "apps", label: "Apps" },
+  { id: "apps", label: "Apps", href: "/apps" },
   { id: "para-quien", label: "Para quién" },
   { id: "contacto", label: "Contacto" },
 ];
@@ -84,24 +85,43 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         </div>
 
         <nav style={{ display: "flex", flexDirection: "column", padding: "24px" }}>
-          {links.map((link) => (
-            <a
-              key={link.id}
-              href={`/#${link.id}`}
-              onClick={(e) => handleNavClick(e, link.id)}
-              style={{
-                padding: "14px 0",
-                fontSize: 17,
-                color: "#1A1614",
-                textDecoration: "none",
-                borderBottom: "1px solid #EDE5DA",
-                fontFamily: "var(--font-playfair)",
-                fontWeight: 600,
-              }}
-            >
-              {link.label}
-            </a>
-          ))}
+          {links.map((link) =>
+            link.href ? (
+              <Link
+                key={link.id}
+                href={link.href}
+                onClick={onClose}
+                style={{
+                  padding: "14px 0",
+                  fontSize: 17,
+                  color: "#1A1614",
+                  textDecoration: "none",
+                  borderBottom: "1px solid #EDE5DA",
+                  fontFamily: "var(--font-playfair)",
+                  fontWeight: 600,
+                }}
+              >
+                {link.label}
+              </Link>
+            ) : (
+              <a
+                key={link.id}
+                href={`/#${link.id}`}
+                onClick={(e) => handleNavClick(e, link.id)}
+                style={{
+                  padding: "14px 0",
+                  fontSize: 17,
+                  color: "#1A1614",
+                  textDecoration: "none",
+                  borderBottom: "1px solid #EDE5DA",
+                  fontFamily: "var(--font-playfair)",
+                  fontWeight: 600,
+                }}
+              >
+                {link.label}
+              </a>
+            )
+          )}
           <a
             href="/#contacto"
             onClick={(e) => handleNavClick(e, "contacto")}

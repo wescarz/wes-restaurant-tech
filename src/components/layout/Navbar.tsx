@@ -8,7 +8,7 @@ import { MobileMenu } from "./MobileMenu";
 
 const links = [
   { id: "servicios", label: "Consultoría" },
-  { id: "apps", label: "Apps" },
+  { id: "apps", label: "Apps", href: "/apps" },
   { id: "para-quien", label: "Para quién" },
   { id: "contacto", label: "Contacto" },
 ];
@@ -66,18 +66,30 @@ export function Navbar() {
 
           {/* Desktop nav */}
           <nav className="hidden lg:flex items-center" style={{ gap: 36 }}>
-            {links.map((link) => (
-              <a
-                key={link.id}
-                href={`/#${link.id}`}
-                onClick={(e) => handleNavClick(e, link.id)}
-                style={{ fontSize: 13, color: "#8A8078", textDecoration: "none", letterSpacing: ".01em", transition: "color .2s" }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "#F0EAE0")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "#8A8078")}
-              >
-                {link.label}
-              </a>
-            ))}
+            {links.map((link) =>
+              link.href ? (
+                <Link
+                  key={link.id}
+                  href={link.href}
+                  style={{ fontSize: 13, color: "#8A8078", textDecoration: "none", letterSpacing: ".01em", transition: "color .2s" }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = "#F0EAE0")}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = "#8A8078")}
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <a
+                  key={link.id}
+                  href={`/#${link.id}`}
+                  onClick={(e) => handleNavClick(e, link.id)}
+                  style={{ fontSize: 13, color: "#8A8078", textDecoration: "none", letterSpacing: ".01em", transition: "color .2s" }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = "#F0EAE0")}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = "#8A8078")}
+                >
+                  {link.label}
+                </a>
+              )
+            )}
           </nav>
 
           {/* CTA */}

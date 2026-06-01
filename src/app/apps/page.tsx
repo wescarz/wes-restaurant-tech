@@ -17,8 +17,8 @@ const apps = [
   },
   {
     slug: "mesa",
-    title: "Mesa",
-    description: "Operaciones diarias: pedidos rápidos, recepción de albaranes, inventario express e IA integrada.",
+    title: "MESA",
+    description: "Crecimiento y relación con el cliente: reservas online, CRM, fidelización, gestión de reseñas, menú QR e IA para WhatsApp e Instagram.",
   },
 ];
 
