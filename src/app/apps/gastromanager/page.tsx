@@ -72,9 +72,18 @@ export default function GastroManagerPage() {
         <p className="mt-6 max-w-2xl mx-auto text-lg text-[var(--text-secondary)]">
           Gestión integral de tu restaurante: desde el recetario hasta el control de costes, HACCP y producción.
         </p>
-        <div className="mt-10">
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
           <Button href="/demo" size="lg">
             Prueba 14 días gratis
+          </Button>
+          <Button
+            href={process.env.NEXT_PUBLIC_APP_URL ?? "https://restaurant-manager-sync-32xbzgovn-wes-projects-bd7d81b0.vercel.app/"}
+            variant="outline"
+            size="lg"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Acceder a la app →
           </Button>
         </div>
       </section>

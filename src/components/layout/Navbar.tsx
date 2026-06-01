@@ -93,7 +93,17 @@ export function Navbar() {
           </nav>
 
           {/* CTA */}
-          <div className="hidden lg:block">
+          <div className="hidden lg:flex items-center gap-3">
+            <a
+              href={process.env.NEXT_PUBLIC_APP_URL ?? "https://restaurant-manager-sync-32xbzgovn-wes-projects-bd7d81b0.vercel.app/"}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ fontSize: 13, fontWeight: 500, padding: "9px 20px", borderRadius: 4, color: "#8A8078", textDecoration: "none", transition: "color .2s", fontFamily: "var(--font-dm-sans)" }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "#F0EAE0")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "#8A8078")}
+            >
+              Acceder
+            </a>
             <a
               href="/#contacto"
               onClick={(e) => handleNavClick(e, "contacto")}

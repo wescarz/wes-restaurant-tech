@@ -141,6 +141,26 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           >
             Solicitar diagnóstico
           </a>
+          <a
+            href={process.env.NEXT_PUBLIC_APP_URL ?? "https://restaurant-manager-sync-32xbzgovn-wes-projects-bd7d81b0.vercel.app/"}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "block",
+              marginTop: 10,
+              padding: "14px 24px",
+              border: "1.5px solid #D8CFC0",
+              color: "#1A1614",
+              borderRadius: 4,
+              fontSize: 14,
+              fontWeight: 500,
+              textDecoration: "none",
+              textAlign: "center",
+              fontFamily: "var(--font-dm-sans)",
+            }}
+          >
+            Acceder a la app
+          </a>
         </nav>
       </div>
     </div>
