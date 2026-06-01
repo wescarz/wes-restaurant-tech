@@ -73,17 +73,16 @@ export default function GastroManagerPage() {
           Gestión integral de tu restaurante: desde el recetario hasta el control de costes, HACCP y producción.
         </p>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-          <Button href="/demo" size="lg">
-            Prueba 14 días gratis
-          </Button>
           <Button
-            href={process.env.NEXT_PUBLIC_APP_URL ?? "https://app.whet.es"}
-            variant="outline"
+            href="https://app.whet.es"
             size="lg"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Acceder a la app →
+            Prueba 14 días gratis
+          </Button>
+          <Button href="/demo" variant="outline" size="lg">
+            Solicitar demo
           </Button>
         </div>
       </section>
@@ -99,8 +98,13 @@ export default function GastroManagerPage() {
       </section>
 
       <section className="mt-24 text-center">
-        <Button href="/precios" variant="outline" size="lg">
-          Ver planes y precios
+        <Button
+          href="https://app.whet.es"
+          size="lg"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Acceder a GastroManager →
         </Button>
       </section>
     </div>
