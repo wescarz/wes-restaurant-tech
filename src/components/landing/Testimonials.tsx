@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/Card";
 
 const testimonials = [
   {
-    quote: "GastroManager nos ha permitido controlar el food cost y tener todo el recetario digitalizado. Imprescindible.",
+    quote: "Whet nos ha permitido controlar el food cost y tener todo el recetario digitalizado. Imprescindible.",
     author: "Chef de restaurante en Barcelona",
     role: "Restaurante gastronómico",
   },

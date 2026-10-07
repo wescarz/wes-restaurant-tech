@@ -1,6 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  async redirects() {
+    return [
+      {
+        source: "/apps/gastromanager",
+        destination: "/apps/whet",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

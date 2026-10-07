@@ -12,7 +12,7 @@ interface ContactFormProps {
 
 const defaultTypes = [
   { value: "consultoria", label: "Consultoría gastronómica" },
-  { value: "demo", label: "Demo de GastroManager" },
+  { value: "demo", label: "Demo de Whet" },
   { value: "apertura", label: "Apertura de restaurante" },
   { value: "foodcost", label: "Food cost y escandallos" },
 ];

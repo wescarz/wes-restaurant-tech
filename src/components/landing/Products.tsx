@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/Button";
 
 const products = [
   {
-    slug: "gastromanager",
-    title: "GastroManager",
+    slug: "whet",
+    title: "Whet",
     description: "Gestión integral — Recetario, costes, HACCP, producción, stock, personal",
     cta: "Descubrir",
   },

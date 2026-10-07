@@ -21,7 +21,7 @@ const projects = [
     type: "Tecnología",
     location: "Barcelona",
     title: "Grupo de restauración",
-    result: "Implantación de GastroManager en 3 locales. Recetario unificado, escandallos en tiempo real y control centralizado.",
+    result: "Implantación de Whet en 3 locales. Recetario unificado, escandallos en tiempo real y control centralizado.",
     placeholder: true,
   },
 ];

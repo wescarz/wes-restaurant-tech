@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.whet.es"),
   title: "Whet Studio — Consultoría gastronómica y tecnología para restaurantes en Barcelona",
   description:
-    "Consultoría gastronómica y operativa para restaurantes en Barcelona. Aperturas, escandallos, food cost, formación de equipos y tecnología propia: GastroManager y MESA.",
+    "Consultoría gastronómica y operativa para restaurantes en Barcelona. Aperturas, escandallos, food cost, formación de equipos y tecnología propia: Whet y MESA.",
   keywords: [
     "consultoría gastronómica Barcelona",
     "consultor gastronómico Barcelona",

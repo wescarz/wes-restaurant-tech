@@ -57,7 +57,7 @@ export default function MesaPage() {
           MESA gestiona la relación con tus clientes — reservas, fidelización, reputación y comunicación. Más ocupación, más recurrencia, más margen.
         </p>
         <p className="mt-3 max-w-xl mx-auto text-sm text-[var(--text-muted)]">
-          Para el control interno de cocina y costes, consulta <a href="/apps/gastromanager" className="text-[var(--accent)] hover:underline">GastroManager</a>.
+          Para el control interno de cocina y costes, consulta <a href="/apps/whet" className="text-[var(--accent)] hover:underline">Whet</a>.
         </p>
         <div className="mt-10">
           <Button href="/demo" size="lg">

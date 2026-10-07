@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticUrls = [
     "",
     "/apps",
-    "/apps/gastromanager",
+    "/apps/whet",
     "/consultoria",
     "/desarrollo",
     "/precios",

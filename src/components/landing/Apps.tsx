@@ -6,7 +6,7 @@ const apps = [
   {
     category: "Para dirección y cocina",
     badge: "Control interno · Costes y operaciones",
-    name: "GastroManager",
+    name: "Whet",
     tagline: "Controla lo que cuesta. Sabe lo que ganas.",
     desc: "Sistema de gestión para cocina y dirección. Recetario digital, escandallos, food cost y márgenes en tiempo real. Con IA para apoyar la toma de decisiones sin añadir trabajo burocrático.",
     benefits: [
@@ -15,7 +15,7 @@ const apps = [
       { title: "IA para análisis operativo", text: "Detecta desviaciones, automatiza tareas repetitivas y digitaliza documentos. Datos útiles para decidir, no para reportar." },
     ],
     href: "https://app.whet.es",
-    cta: "Ver GastroManager →",
+    cta: "Entrar en Whet →",
   },
 ];
 
@@ -36,7 +36,7 @@ export function Apps() {
               </h2>
             </div>
             <div style={{ fontSize: 16, color: "#6B5B4E", lineHeight: 1.75, fontFamily: "var(--font-dm-sans)" }}>
-              <strong style={{ display: "block", color: "#1A1614", marginBottom: 8, fontFamily: "var(--font-dm-sans)", fontSize: 15 }}>GastroManager</strong> gestiona el interior del negocio: lo que cuesta, lo que produce y cómo se gestiona la cocina.
+              <strong style={{ display: "block", color: "#1A1614", marginBottom: 8, fontFamily: "var(--font-dm-sans)", fontSize: 15 }}>Whet</strong> gestiona el interior del negocio: lo que cuesta, lo que produce y cómo se gestiona la cocina.
               <br /><br />
               Recetario digital, escandallos, food cost, HACCP, producción y control de márgenes — todo en una plataforma pensada para la realidad de un restaurante.
             </div>

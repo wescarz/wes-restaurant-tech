@@ -5,7 +5,7 @@ const tags = [
   "Rentabilidad y márgenes",
   "Aperturas",
   "Procesos y equipo",
-  "GastroManager",
+  "Whet",
   "Concepto gastronómico",
   "Ingeniería de menú",
   "Food cost y escandallos",

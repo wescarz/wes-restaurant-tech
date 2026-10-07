@@ -68,7 +68,7 @@ export default function DemoPage() {
                 name="app"
                 className="w-full rounded-lg border border-[var(--border)] bg-[var(--bg-secondary)] px-4 py-3 text-[var(--text-primary)]"
               >
-                <option value="gastromanager">GastroManager</option>
+                <option value="whet">Whet</option>
               </select>
             </div>
           </div>

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const footerLinks = {
   Apps: [
-    { href: "/apps/gastromanager", label: "GastroManager" },
+    { href: "/apps/whet", label: "Whet" },
   ],
   Empresa: [
     { href: "/#para-quien", label: "Para quién" },

@@ -48,7 +48,7 @@ const services = [
   {
     n: "04",
     title: "Tecnología para restaurantes",
-    intro: "GastroManager — herramienta propia creada desde dentro del sector. No es un producto de startup diseñado desde fuera: nace de detectar los mismos problemas una y otra vez en restaurantes reales.",
+    intro: "Whet — herramienta propia creada desde dentro del sector. No es un producto de startup diseñado desde fuera: nace de detectar los mismos problemas una y otra vez en restaurantes reales.",
     bullets: [
       "Recetario digital, escandallos, food cost y control de costes en tiempo real",
       "HACCP, producción, stock y pedidos a proveedores en un solo sistema",

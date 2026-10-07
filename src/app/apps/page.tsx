@@ -3,15 +3,15 @@ import { Button } from "@/components/ui/Button";
 import { createMetadata } from "@/components/shared/SEO";
 
 export const metadata = createMetadata({
-  title: "Tecnología para restaurantes — GastroManager y MESA",
-  description: "GastroManager: software de escandallos, food cost y gestión de cocina. MESA: reservas, CRM y fidelización. Tecnología propia para restaurantes.",
+  title: "Tecnología para restaurantes — Whet y MESA",
+  description: "Whet: software de escandallos, food cost y gestión de cocina. MESA: reservas, CRM y fidelización. Tecnología propia para restaurantes.",
   path: "/apps",
 });
 
 const apps = [
   {
-    slug: "gastromanager",
-    title: "GastroManager",
+    slug: "whet",
+    title: "Whet",
     description: "Gestión integral de tu restaurante: recetario, costes, HACCP, producción, dispensa, informes y más.",
   },
 ];

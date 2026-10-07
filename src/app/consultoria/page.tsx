@@ -30,7 +30,7 @@ const services = [
   {
     icon: Smartphone,
     title: "Digitalización",
-    description: "Implantación de GastroManager, formación del equipo y migración de datos.",
+    description: "Implantación de Whet, formación del equipo y migración de datos.",
   },
   {
     icon: Search,

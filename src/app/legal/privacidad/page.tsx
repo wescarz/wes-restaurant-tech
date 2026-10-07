@@ -17,7 +17,7 @@ export default function PrivacidadPage() {
       </p>
       <div className="mt-12 prose prose-invert max-w-none">
         <p className="text-[var(--text-secondary)]">
-          Whet Studio (&quot;nosotros&quot;, &quot;nuestro&quot;) recoge y trata la información que nos facilitas al usar esta web y nuestros servicios (formularios de contacto, suscripciones, uso de GastroManager y Mesa) con el fin de atender tu solicitud, gestionar la relación comercial y enviarte comunicaciones relacionadas con nuestros productos y servicios si nos has dado tu consentimiento.
+          Whet Studio (&quot;nosotros&quot;, &quot;nuestro&quot;) recoge y trata la información que nos facilitas al usar esta web y nuestros servicios (formularios de contacto, suscripciones, uso de Whet y Mesa) con el fin de atender tu solicitud, gestionar la relación comercial y enviarte comunicaciones relacionadas con nuestros productos y servicios si nos has dado tu consentimiento.
         </p>
         <p className="mt-4 text-[var(--text-secondary)]">
           Los datos se conservan mientras sea necesario para la finalidad indicada y para cumplir obligaciones legales. Puedes ejercer tus derechos de acceso, rectificación, supresión, limitación y portabilidad escribiendo a wes@whet.es. Si consideras que el tratamiento no se ajusta a la normativa, puedes presentar una reclamación ante la autoridad de control (AEPD).
